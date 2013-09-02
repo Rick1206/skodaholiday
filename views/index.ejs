@@ -1,3 +1,43 @@
-<section class="content">
-  123
+<section id="page" class="body-background-index">
+  <div class="hd">
+    <%include nav%>
+  </div>
+  <div class="bd">
+    <div class="wrap">
+      <div class="call-board"><img src="asserts/images/call-board.png" alt=""/></div>
+      <div class="expert">
+        <div class="expert-mask" id="expert-link">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
+        <div class="expert-carousel">
+          <% for(var i = 0 ;i<6;i++){%>
+            <div class="item">
+              <ul class="item-carousel">
+                <li data-href="#url1"><img src="asserts/images/pic_01.jpg" alt=""/><img src="asserts/images/pic_02.jpg" alt=""/></li>
+                <li data-href="#url2"><img src="asserts/images/pic_03.jpg" alt=""/><img src="asserts/images/pic_02.jpg" alt=""/></li>
+                <li data-href="#url3"><img src="asserts/images/pic_04.jpg" alt=""/><img src="asserts/images/pic_02.jpg" alt=""/></li>
+              </ul>
+            </div>
+          <%}%>
+        </div>
+        <div class="expert-carousel-pagination">
+          <a href="javascript:void(0)" class="icon-controller-expert selected"></a>
+          <a href="javascript:void(0)" class="icon-controller-expert"></a>
+          <a href="javascript:void(0)" class="icon-controller-expert"></a>
+        </div>
+      </div>
+      <div class="call-board2">
+        <ul class="call-board2-carousel">
+          <li><img src="asserts/images/pic_02.jpg" alt=""/></li>
+          <li><img src="asserts/images/pic_02.jpg" alt=""/></li>
+          <li><img src="asserts/images/pic_02.jpg" alt=""/></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
