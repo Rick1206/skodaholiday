@@ -46,7 +46,7 @@ header{
           width: 87px;
           height: 23px;
           display: block;
-          background: url(../images/btns.png) no-repeat -7px -5px;
+          background: url(../images/sprites.png) no-repeat -7px -5px;
           margin-left: -2px;
           text-align: center;
           padding-top: 5px;
@@ -95,7 +95,7 @@ footer{
     padding-left: 15px;
     position: relative;
     .share-bar{
-      top:-70px;
+      top:-85px;
       left: -65px;
     }
   }
@@ -114,7 +114,7 @@ footer{
     height: 43px;
     background: url(../images/logo2.png) no-repeat;
     position: absolute;
-    top: 31px;
+    top: 24px;
     right: 31px;
   }
 }
@@ -135,12 +135,17 @@ footer{
   background: url(../images/body-background.jpg) no-repeat center top;
   min-height: 1217px;
 }
+.body-background-idea{
+  background: url(../images/body-background-idea-top.jpg) no-repeat center top;
+}
+.body-background-idea-repeat{
+  background: url(../images/body-background-idea-repeat.jpg) repeat-y center top;
+}
 .call-board{
   position: absolute;
-  top: 114px;
+  top: 49px;
   right: 62px;
   width: 236px;
-  height: 172px;
   img{
     width: 100%;
   }
@@ -214,5 +219,196 @@ footer{
 }
 .call-board2-carousel{
   list-style: none;
+  li{
+    float: left;
+    width: 406px;
+    height: 240px;
+  }
 }
-
+.call-board2-pagination{
+  padding-top:7px;
+  text-align: right;
+  a{
+    margin: 0 5px;
+  }
+}
+.weibo-show{
+  width: 142px;
+  height: 159px;
+  position: absolute;
+  top: 446px;
+  left: 320px;
+}
+.prize{
+  width: 180px;
+  height: 80px;
+  position: absolute;
+  top: 394px;
+  left: 797px;
+}
+.idea-head{
+  width: @wrapWidth;
+  height: 162px;
+  .container-fixed();
+  position: relative;
+  .btn{
+    position: absolute;
+    top: 20px;
+    left: 782px;
+  }
+}
+.ideas{
+  width: @wrapWidth - 160px;
+  .container-fixed();
+  position: relative;
+  padding: 0 10px 50px 40px;
+  .ideas-item{
+    width:184px;
+    height: 240px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    display: block;
+    background-image: url(../images/idea_items.jpg);
+  }
+  .ideas-hd{
+    .hd-item1{
+      background-position: 0 0;
+      &:hover,&.selected{
+        background-position: 0 -241px;
+      }
+    }
+    .hd-item2{
+      background-position: -210px 0;
+      cursor: pointer;
+      &:hover,&.selected{
+        background-position: -210px -241px;
+      }
+    }
+    .hd-item3{
+      background-position: -416px 0;
+      cursor: pointer;
+      &:hover,&.selected{
+        background-position: -416px -241px;
+      }
+    }
+    .hd-item4{
+      background-position: -616px 0;
+      cursor: pointer;
+      &:hover,&.selected{
+        background-position: -616px -241px;
+      }
+    }
+  }
+  .ideas-bd{
+    .ideas-item{
+      height: 276px;
+      .info{
+        padding-top: 34px;
+        width: 153px;
+        .container-fixed();
+        .span8{
+          padding-top: 4px;
+          color: #555555;
+          font-weight: bold;
+          span{
+            color: #61b247;
+          }
+        }
+        .span4{
+          img{
+            width: 47px;
+            height: 47px;
+          }
+        }
+        .pic{
+          text-align: center;
+          width: 150px;
+          overflow: hidden;
+          height: 125px;
+          display: table-cell;
+          vertical-align: middle;
+          img{
+            width: 100%;
+          }
+        }
+      }
+      .btns{
+        width: 162px;
+        margin-left: 12px;
+        .clearfix();
+        .message{
+          width: 82px;
+          height: 20px;
+          text-align: center;
+          float: left;
+          cursor: pointer;
+          &.selected{
+            background-color: #4ba82e;
+            .icon-message{
+              background-position: -21px -366px;
+            }
+          }
+        }
+        .share{
+          width: 78px;
+          height: 20px;
+          margin-left: 2px;
+          text-align: center;
+          position: relative;
+          float: left;
+          .share-btn{
+            width: 78px;
+            height: 20px;
+            margin: 0;
+            background: none;
+            padding: 0;
+            border: 0;
+            .font-share{
+              background: url(../images/sprites.png) no-repeat -52px -345px;
+              width: 18px;
+            }
+            &.selected{
+              background-color: #4ba82e;
+              .font-share{
+                background-position: -52px -366px;
+              }
+            }
+          }
+          .share-bar{
+            top: -72px;
+            left: -65px;
+            height: 62px;
+            z-index: 99;
+            text-align: left;
+          }
+        }
+        .click-guess{
+          text-align: center;
+          display: block;
+          height: 18px;
+          float: left;
+          width: 100%;
+          margin-top: 1px;
+          padding-top: 2px;
+          &:hover,&.selected{
+            background-color: #4ba82e;
+            .font-becomeTalent{
+              background-position: -58px -72px;
+            }
+          }
+        }
+      }
+    }
+    .bd-item1{
+      background-position: 0 -482px;
+    }
+    .bd-item2{
+      background-position: -210px -482px;
+    }
+    .bd-item3{
+      background-position: -416px -482px;
+    }
+  }
+}

@@ -62,5 +62,46 @@
             }
         })();
 
+        //call-board2
+        $('.call-board2-carousel').length ==1&&
+        (function(){
+            $('.call-board2-carousel').carouFredSel({
+                width:406,
+                height:240,
+                auto:{
+                    timeoutDuration:5000
+                },
+                pagination:{
+                    container:'.call-board2-pagination',
+                    anchorBuilder:function(nr){
+                        return '<a href="#'+nr+'" class="btn-controller-callBoard2"></a>';
+                    }
+                }
+            });
+        })();
+
+        //share bar
+        $('.share-btn').length>=1&&
+        (function(){
+
+            $('.share-btn').on('mouseenter',function(){
+                $(this).siblings('.share-bar').show(),
+                $(this).addClass('selected');
+            }).parent('.share').on('mouseleave',function(){
+                    $(this).find('.share-bar').hide(),
+                    $(this).find('.share-btn').removeClass('selected');
+                });
+
+        })();
+        //maessage popup
+        $('.JsPopMessage').length>=1&&
+        (function(){
+
+            $('.JsPopMessage').on('mouseenter',function(){
+                $(this).addClass('selected');
+            }).on('mouseleave',function(){
+                    $(this).removeClass('selected');
+                });
+        })();
 
 })(window.jQuery);

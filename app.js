@@ -49,7 +49,7 @@ app.post('/',welcome.refresh);
 
 //html
 htmlStatic.set('index');
-
+htmlStatic.set('idea');
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
