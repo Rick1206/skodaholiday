@@ -57,7 +57,11 @@ htmlStatic.set('idea',{_page:0,logined:'1'});
 htmlStatic.set('idea1','idea',{_page:1,logined:'1'});
 htmlStatic.set('idea2','idea',{_page:2,logined:'1'});
 htmlStatic.set('idea3','idea',{_page:3,logined:'1'});
-htmlStatic.set('idea_logout','idea',{_page:0,logined:'0'});
+htmlStatic.set('idea_logout','idea',{_page:0});
+htmlStatic.set('profile',{logined:1,user:1});
+htmlStatic.set('profile_no_avatar','profile',{logined:1,user:0});
+htmlStatic.set('draw');
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

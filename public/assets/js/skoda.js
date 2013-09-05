@@ -117,7 +117,7 @@
         $('#gotop').length==1&&(function(){
             var gotop = $('#gotop');
             var _h ,_foot_h;
-            $('a',gotop).on('click',function(){
+            gotop.on('click',function(){
                 $(window).scrollTop(0);
             });
             $(window).resize(function(){
