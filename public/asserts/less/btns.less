@@ -8,16 +8,24 @@
   border-left: 1px solid #cacaca;
   .box-shadow(-1px 1px 3px #bcbcbc);
 }
-.share-btn{
+.btn-share{
   margin-top: -3px;
-  width: 55px;
-  height: 25px - 5px;
+  width: 56px;
+  height: 27px;
+  display: inline-block;
   text-align: center;
-  padding-top: 5px;
-  background-color: #fff;
-  .btn-shadow();
+  background-position: -6px -303px;
   &:hover,&.selected{
-    background-color: #d0e9c6;
+    background-position: -95px -303px;
+  }
+}
+.btn-submit{
+  width: 50px;
+  height: 24px;
+  background-position: -95px -341px;
+  display: inline-block;
+  &:hover{
+    background-position: -95px -372px;
   }
 }
 .share-bar,.icon-tsina,.icon-kaixin001,.icon-douban,.icon-renren,.icon-tqq{
@@ -132,3 +140,12 @@
   }
 }
 
+.btn-getmore-idea{
+  width: 84px;
+  height: 26px;
+  display: inline-block;
+  background-position: -412px -6px;
+  &:hover{
+    background-position: -412px -40px;
+  }
+}

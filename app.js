@@ -35,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
+    app.locals.pretty = true;
 }
 
 app.conf = JSON.parse(fs.readFileSync('package.json','utf-8'));
@@ -48,9 +49,15 @@ app.get('/',welcome.index);
 app.post('/',welcome.refresh);
 
 //html
+app.locals({
+    logined:0
+});
 htmlStatic.set('index');
-htmlStatic.set('idea');
-
+htmlStatic.set('idea',{_page:0,logined:'1'});
+htmlStatic.set('idea1','idea',{_page:1,logined:'1'});
+htmlStatic.set('idea2','idea',{_page:2,logined:'1'});
+htmlStatic.set('idea3','idea',{_page:3,logined:'1'});
+htmlStatic.set('idea_logout','idea',{_page:0,logined:'0'});
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

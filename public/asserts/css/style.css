@@ -673,13 +673,31 @@ header .wrap {
   float: left;
   _display: inline;
   list-style: none;
+  margin-left: -3px;
+  position: relative;
+  z-index: 1;
+}
+.nav-bar .nav .nav-list li:nth-child(1) {
+  margin-left: 0;
+  z-index: 5;
+}
+.nav-bar .nav .nav-list li:nth-child(2) {
+  z-index: 4;
+}
+.nav-bar .nav .nav-list li:nth-child(3) {
+  z-index: 3;
+}
+.nav-bar .nav .nav-list li:nth-child(4) {
+  z-index: 2;
+}
+.nav-bar .nav .nav-list li:nth-child(5) {
+  z-index: 1;
 }
 .nav-bar .nav .nav-list li a {
   width: 87px;
   height: 23px;
   display: block;
   background: url(../images/sprites.png) no-repeat -7px -5px;
-  margin-left: -2px;
   text-align: center;
   padding-top: 5px;
 }
@@ -688,6 +706,36 @@ header .wrap {
 }
 .nav-bar .nav .nav-list li a span {
   cursor: pointer;
+}
+.nav-bar .nav .nav-list li .logined {
+  width: 158px;
+  height: 28px;
+  display: block;
+  background: url(../images/sprites.png) no-repeat -7px -85px;
+  text-align: center;
+}
+.nav-bar .nav .nav-list li .logined .usr-pic {
+  float: left;
+  height: 23px;
+  width: 23px;
+  padding: 2px 10px 2px;
+}
+.nav-bar .nav .nav-list li .logined .usr-name {
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 82px;
+  text-align: left;
+  line-height: 28px;
+  color: #ffffff;
+}
+.nav-bar .nav .nav-list li .logined .usr-mgs {
+  color: #0bb419;
+  float: left;
+  width: 25px;
+  text-align: center;
+  padding-top: 2px;
 }
 footer {
   width: 100%;
@@ -724,7 +772,7 @@ footer .share {
   position: relative;
 }
 footer .share .share-bar {
-  top: -85px;
+  top: -80px;
   left: -65px;
 }
 footer .copyright {
@@ -780,14 +828,14 @@ footer .logo2 {
   clear: both;
 }
 .body-background-index {
-  background: url(../images/body-background.jpg) no-repeat center top;
+  background: #ececec url(../images/body-background.jpg) no-repeat center top;
   min-height: 1217px;
 }
 .body-background-idea {
-  background: url(../images/body-background-idea-top.jpg) no-repeat center top;
+  background: #ececec url(../images/body-background-idea-top.jpg) no-repeat center top;
 }
 .body-background-idea-repeat {
-  background: url(../images/body-background-idea-repeat.jpg) repeat-y center top;
+  background: #ececec url(../images/body-background-idea-repeat.jpg) repeat-y center top;
 }
 .call-board {
   position: absolute;
@@ -818,6 +866,12 @@ footer .logo2 {
   float: left;
   display: block;
 }
+.expert-mask div.block {
+  width: 130px;
+  height: 121px;
+  float: left;
+  display: block;
+}
 .expert-carousel {
   width: 400px;
   height: 250px;
@@ -833,6 +887,7 @@ footer .logo2 {
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-color: #d0d4d7;
 }
 .expert-carousel .item .item-carousel li {
   float: left;
@@ -840,11 +895,18 @@ footer .logo2 {
   width: 130px;
   height: 121px;
   overflow: hidden;
+  position: relative;
 }
 .expert-carousel .item .item-carousel li img {
   width: 130px;
   height: 121px;
-  display: block;
+}
+.expert-carousel .item .item-carousel li .img-hover {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  display: none;
 }
 .expert-carousel-pagination {
   position: absolute;
@@ -879,11 +941,11 @@ footer .logo2 {
   margin: 0 5px;
 }
 .weibo-show {
-  width: 142px;
-  height: 159px;
+  width: 187px;
+  height: 246px;
   position: absolute;
-  top: 446px;
-  left: 320px;
+  top: 713px;
+  left: 201px;
 }
 .prize {
   width: 180px;
@@ -920,7 +982,7 @@ footer .logo2 {
   margin-left: auto;
   *zoom: 1;
   position: relative;
-  padding: 0 10px 50px 40px;
+  padding: 20px 10px 50px 40px;
 }
 .ideas:before,
 .ideas:after {
@@ -1031,15 +1093,51 @@ footer .logo2 {
 .ideas .ideas-bd .ideas-item .btns .message {
   width: 82px;
   height: 20px;
+  display: block;
   text-align: center;
-  float: left;
-  cursor: pointer;
+  position: relative;
 }
-.ideas .ideas-bd .ideas-item .btns .message.selected {
+.ideas .ideas-bd .ideas-item .btns .message.selected,
+.ideas .ideas-bd .ideas-item .btns .message:hover {
   background-color: #4ba82e;
 }
-.ideas .ideas-bd .ideas-item .btns .message.selected .icon-message {
+.ideas .ideas-bd .ideas-item .btns .message.selected .icon-message,
+.ideas .ideas-bd .ideas-item .btns .message:hover .icon-message {
   background-position: -21px -366px;
+}
+.ideas .ideas-bd .ideas-item .btns .message-box {
+  position: relative;
+  float: left;
+}
+.ideas .ideas-bd .ideas-item .btns .message-box .message-popup {
+  position: absolute;
+  width: 229px;
+  height: 153px;
+  background: url(../images/sprites_02.png) no-repeat;
+  top: -152px;
+  left: -75px;
+  display: none;
+}
+.ideas .ideas-bd .ideas-item .btns .message-box .message-popup .mwrap {
+  padding: 21px 0 0 15px;
+}
+.ideas .ideas-bd .ideas-item .btns .message-box .message-popup textarea {
+  width: 181px;
+  height: 56px;
+  border: 1px solid #bcbcbd;
+  color: #aeaeae;
+}
+.ideas .ideas-bd .ideas-item .btns .message-box .message-popup .btn-submit {
+  margin-left: 132px;
+  margin-top: 10px;
+}
+.ideas .ideas-bd .ideas-item .btns .message-box .message-popup .close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
 }
 .ideas .ideas-bd .ideas-item .btns .share {
   width: 78px;
@@ -1049,7 +1147,7 @@ footer .logo2 {
   position: relative;
   float: left;
 }
-.ideas .ideas-bd .ideas-item .btns .share .share-btn {
+.ideas .ideas-bd .ideas-item .btns .share .btn-share {
   width: 78px;
   height: 20px;
   margin: 0;
@@ -1057,14 +1155,16 @@ footer .logo2 {
   padding: 0;
   border: 0;
 }
-.ideas .ideas-bd .ideas-item .btns .share .share-btn .font-share {
+.ideas .ideas-bd .ideas-item .btns .share .btn-share .font-share {
   background: url(../images/sprites.png) no-repeat -52px -345px;
   width: 18px;
+  height: 20px;
+  display: inline-block;
 }
-.ideas .ideas-bd .ideas-item .btns .share .share-btn.selected {
+.ideas .ideas-bd .ideas-item .btns .share .btn-share.selected {
   background-color: #4ba82e;
 }
-.ideas .ideas-bd .ideas-item .btns .share .share-btn.selected .font-share {
+.ideas .ideas-bd .ideas-item .btns .share .btn-share.selected .font-share {
   background-position: -52px -366px;
 }
 .ideas .ideas-bd .ideas-item .btns .share .share-bar {
@@ -1091,14 +1191,100 @@ footer .logo2 {
 .ideas .ideas-bd .ideas-item .btns .click-guess.selected .font-becomeTalent {
   background-position: -58px -72px;
 }
+.ideas .ideas-bd .ideas-item .btns .click-guess.disable-pointer {
+  cursor: default;
+}
 .ideas .ideas-bd .bd-item1 {
   background-position: 0 -482px;
 }
 .ideas .ideas-bd .bd-item2 {
-  background-position: -210px -482px;
+  background-position: -418px -482px;
 }
 .ideas .ideas-bd .bd-item3 {
-  background-position: -416px -482px;
+  background-position: -209px -482px;
+}
+.ideas .ideas-bd .dropdown {
+  position: absolute;
+  top: -10px;
+  left: 725px;
+}
+.dropdown.open ul.dropdown-menu {
+  display: block;
+  list-style: none;
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+.dropdown.open ul.dropdown-menu li {
+  min-height: 26px;
+}
+.dropdown.open .dropdown-toggle-text1 {
+  background-position: -124px -186px;
+}
+.dropdown ul.dropdown-menu {
+  display: none;
+}
+[class^=dropdown-toggle-text] {
+  background-image: url(../images/sprites_02.png);
+  height: 26px;
+  cursor: pointer;
+  display: block;
+}
+.dropdown-toggle-text1 {
+  width: 102px;
+  background-position: -5px -186px;
+}
+.dropdown-toggle-text1:hover {
+  background-position: -124px -186px;
+}
+.dropdown-toggle-text2 {
+  width: 76px;
+  background-position: -5px -212px;
+}
+.dropdown-toggle-text2:hover {
+  background-position: -124px -212px;
+}
+.dropdown-toggle-text3 {
+  width: 76px;
+  background-position: -5px -238px;
+}
+.dropdown-toggle-text3:hover {
+  background-position: -124px -238px;
+}
+.dropdown-toggle-text4 {
+  width: 76px;
+  background-position: -5px -264px;
+}
+.dropdown-toggle-text4:hover {
+  background-position: -124px -264px;
+}
+.dropdown-toggle-text5 {
+  width: 76px;
+  background-position: -5px -299px;
+}
+.dropdown-toggle-text5:hover {
+  background-position: -124px -299px;
+}
+#gotop {
+  width: 85px;
+  height: 212px;
+  background: url(../images/back_top.png);
+  position: fixed;
+  margin-left: 900px;
+  top: 1000px;
+}
+#gotop a {
+  display: block;
+  width: 89px;
+  height: 32px;
+  position: absolute;
+  top: 130px;
+  left: 0;
+}
+.getmore-idea {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 29px;
 }
 .text-sc {
   background: url(../images/text-simplayclerver.png) no-repeat;
@@ -1140,11 +1326,6 @@ footer .logo2 {
 .font-nav-a5 {
   background-position: -343px -7px;
 }
-.font-share {
-  background-position: -12px -52px;
-  width: 32px;
-  height: 16px;
-}
 .font-becomeTalent {
   width: 70px;
   height: 15px;
@@ -1159,24 +1340,26 @@ footer .logo2 {
 [class^=btn-] {
   background-image: url(../images/sprites.png);
 }
-.share-btn {
+.btn-share {
   margin-top: -3px;
-  width: 55px;
-  height: 20px;
+  width: 56px;
+  height: 27px;
+  display: inline-block;
   text-align: center;
-  padding-top: 5px;
-  background-color: #fff;
-  display: block;
-  border: 1px solid #e3e3e3;
-  border-bottom: 1px solid #cacaca;
-  border-left: 1px solid #cacaca;
-  -webkit-box-shadow: -1px 1px 3px #bcbcbc;
-  -moz-box-shadow: -1px 1px 3px #bcbcbc;
-  box-shadow: -1px 1px 3px #bcbcbc;
+  background-position: -6px -303px;
 }
-.share-btn:hover,
-.share-btn.selected {
-  background-color: #d0e9c6;
+.btn-share:hover,
+.btn-share.selected {
+  background-position: -95px -303px;
+}
+.btn-submit {
+  width: 50px;
+  height: 24px;
+  background-position: -95px -341px;
+  display: inline-block;
+}
+.btn-submit:hover {
+  background-position: -95px -372px;
 }
 .share-bar,
 .icon-tsina,
@@ -1307,4 +1490,13 @@ footer .logo2 {
 }
 .icon-message.selected {
   background-position: -21px -366px;
+}
+.btn-getmore-idea {
+  width: 84px;
+  height: 26px;
+  display: inline-block;
+  background-position: -412px -6px;
+}
+.btn-getmore-idea:hover {
+  background-position: -412px -40px;
 }
