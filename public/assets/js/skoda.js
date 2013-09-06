@@ -135,12 +135,18 @@
                     gotop.css('top',_h);
                 }
             });
+
+
+            // 'get more data'  for example
+            $('.btn-getmore-idea').length ==1&&(function(){
+                $('.btn-getmore-idea').on('click',function(){
+                    $('.ideas-bd').children().slice(1).clone(true).appendTo($('.ideas-bd'));
+                    $(window).resize();
+                });
+            })();
         })();
 
-        // 'get more data'  for example
-        $('.btn-getmore-idea').length ==1&&(function(){
-            $('.btn-getmore-idea').on('click',function(){
-                $('.ideas-bd').children().slice(1).clone(true).appendTo($('.ideas-bd'))
-            });
+        $('.text-wrap').length >=1 && (function(){
+            $('.text-wrap').jScrollPane();
         })();
 })(window.jQuery);
