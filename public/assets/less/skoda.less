@@ -1,13 +1,14 @@
 header{
   width: 100%;
-  height: 69px;
   min-width: @wrapWidth;
   position: relative;
-  border-bottom: 1px solid #91aab1;
-  position: relative;
-  z-index: 1;
+  z-index: 11;
   .wrap{
     position: relative;
+  }
+  .ht{
+    height: 69px;
+    border-bottom: 1px solid #91aab1;
   }
 }
 .logo-skoda{
@@ -35,7 +36,11 @@ header{
   width: @wrapWidth - 42;
   height: 90px;
   padding-left: 42px;
-  .container-fixed();
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  margin-left: -469px;
+
   .nav{
     padding-top: 26px;
     .fn-left();
@@ -63,7 +68,7 @@ header{
         &:nth-child(5){
           z-index: 1;
         }
-        a{
+        &>a{
           width: 87px;
           height: 23px;
           display: block;
@@ -83,6 +88,7 @@ header{
           display: block;
           background: url(../images/sprites.png) no-repeat -7px -85px;
           text-align: center;
+          cursor: pointer;
           .usr-pic{
             float: left;
             height: 23px;
@@ -103,6 +109,63 @@ header{
             width: 25px;
             text-align: center;
             padding-top: 2px;
+          }
+        }
+        .usr-popup{
+          width: 285px - 40px;
+          height: 186px - 24px ;
+          padding: 12px 20px;
+          position: absolute;
+          left: 5px;
+          top: 34px;
+          background-color: #f6f6f6;
+          border: 5px solid #4ba82e;
+          visibility: hidden;
+          h2{
+            color: #4ba82e;
+            font-size: 14px;
+            padding-bottom: 5px;
+          }
+          .notice-tit{
+            width: 62px;
+            height: 20px;
+            display: inline-block;
+            background-image: url(../images/font-family.png);
+            background-position: -222px -47px;
+          }
+          .text-wrap{
+            width: 244px;
+            height: 100px;
+            overflow: hidden;
+            ul{
+              width: 99%;list-style: none;
+            }
+            li{
+              border-top: 1px solid #cdced0;
+              width: 100%;
+              color: #525558;
+              .clearfix();
+              padding: 5px 0;
+              margin: 0;
+              .m1{
+                float: left;
+                width: 165px;
+                padding-left: 3px;
+              }
+              .time{
+                float: right;
+                color: #8d8d8e;
+              }
+            }
+          }
+          .btns{
+            text-align: right;
+            padding-top: 5px;
+          }
+        }
+        &.open{
+          .usr-popup{
+            visibility: visible;
           }
         }
       }
@@ -173,11 +236,16 @@ footer{
 }
 #page{
   width: 100%;
+  padding-top: 90px;
   .bd .wrap{
     position: relative;
     width: @wrapWidth;
     .container-fixed();
   }
+  &.noTop{
+    padding-top: 0;
+  }
+
 }
 .body-background-index{
   background:#ececec url(../images/body-background.jpg) no-repeat center top;
@@ -253,7 +321,7 @@ footer{
         position: relative;
         img{
           width: 130px;
-          height: 121px;
+          position: relative;
         }
         .img-hover{
           position: absolute;
@@ -269,10 +337,10 @@ footer{
 .expert-carousel-pagination{
   position: absolute;
   top: 260px;
-  left: 200px;
+  left: 196px;
   width: 147px;
   a{
-    margin-left: 1px;
+    margin-left: 6px;
   }
 }
 .call-board2{

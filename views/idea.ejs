@@ -1,75 +1,75 @@
-<section id="page" class="body-background-idea">
-  <div class="hd">
-    <%include nav%>
-    <div class="idea-head">
-      <div class="btn">
-        <a href="#"><span class="btn-3d-becomeTalent2"></span></a>
+<article class="all body-background-idea">
+  <section id="page" class="">
+    <div class="hd">
+      <div class="idea-head">
+        <div class="btn">
+          <a href="#"><span class="btn-3d-becomeTalent2"></span></a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="bd body-background-idea-repeat">
-    <div class="ideas">
-      <div class="ideas-hd">
-        <a class="ideas-item hd-item1 <%if(_page==0){%>selected<%}%>" href="./idea.html"></a>
-        <a class="ideas-item hd-item2 <%if(_page==1){%>selected<%}%>" href="./idea1.html"></a>
-        <a class="ideas-item hd-item3 <%if(_page==2){%>selected<%}%>" href="./idea2.html"></a>
-        <a class="ideas-item hd-item4 <%if(_page==3){%>selected<%}%>" href="./idea3.html"></a>
-      </div>
-      <div class="ideas-bd">
-        <div class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="dropdown-toggle-text1"></span></a>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-            <li><a href="#"><span class="dropdown-toggle-text2"></span></a></li>
-            <li><a href="#"><span class="dropdown-toggle-text3"></span></a></li>
-            <li><a href="#"><span class="dropdown-toggle-text4"></span></a></li>
-            <%if(logined==1){%><li><a href="#"><span class="dropdown-toggle-text5"></span></a></li><%}%>
-          </ul>
+    <div class="bd body-background-idea-repeat">
+      <div class="ideas">
+        <div class="ideas-hd">
+          <a class="ideas-item hd-item1 <%if(_page==0){%>selected<%}%>" href="./idea.html"></a>
+          <a class="ideas-item hd-item2 <%if(_page==1){%>selected<%}%>" href="./idea1.html"></a>
+          <a class="ideas-item hd-item3 <%if(_page==2){%>selected<%}%>" href="./idea2.html"></a>
+          <a class="ideas-item hd-item4 <%if(_page==3){%>selected<%}%>" href="./idea3.html"></a>
         </div>
-        <%for(var i=0;i<12;i++){%>
-        <div class="ideas-item bd-item<%if(_page==0){%><%=i%3+1%><%}else{%><%=_page%><%}%>">
-          <div class="info">
-            <div class="row-fluid">
-              <div class="span4"><img src="assets/images/pic_01.jpg" alt=""/></div>
-              <div class="span8">
-                <p>隔壁家小明</p>
-                <p>智猜人气:<span>123</span></p>
-              </div>
-            </div>
-            <div class="text-center">变色车</div>
-            <div class="pic">
-              <img src="assets/images/pic_02.jpg" alt=""/>
-            </div>
+        <div class="ideas-bd">
+          <div class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="dropdown-toggle-text1"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#"><span class="dropdown-toggle-text2"></span></a></li>
+              <li><a href="#"><span class="dropdown-toggle-text3"></span></a></li>
+              <li><a href="#"><span class="dropdown-toggle-text4"></span></a></li>
+              <%if(logined==1){%><li><a href="#"><span class="dropdown-toggle-text5"></span></a></li><%}%>
+            </ul>
           </div>
-          <div class="btns">
-            <div class="message-box JsPopMessage">
-              <a class="message" href="javascript:void(0);"><span class="icon-message"></span></a>
-              <div class="message-popup">
-                <a class="close" href="javascript:void(0);"></a>
-                <div class="mwrap">
-                  <textarea name="" maxlength="200">写下您的评论...</textarea>
-                  <a class="btn-submit" href="javascript:void(0);"></a>
+          <%for(var i=0;i<12;i++){%>
+          <div class="ideas-item bd-item<%if(_page==0){%><%=i%3+1%><%}else{%><%=_page%><%}%>">
+            <div class="info">
+              <div class="row-fluid">
+                <div class="span4"><img src="assets/images/pic_01.jpg" alt=""/></div>
+                <div class="span8">
+                  <p>隔壁家小明</p>
+                  <p>智猜人气:<span>123</span></p>
                 </div>
               </div>
+              <div class="text-center">变色车</div>
+              <div class="pic">
+                <img src="assets/images/pic_02.jpg" alt=""/>
+              </div>
             </div>
-            <div class="share">
-              <%include share%>
+            <div class="btns">
+              <div class="message-box JsPopMessage">
+                <a class="message" href="javascript:void(0);"><span class="icon-message"></span></a>
+                <div class="message-popup">
+                  <a class="close" href="javascript:void(0);"></a>
+                  <div class="mwrap">
+                    <textarea name="" maxlength="200">写下您的评论...</textarea>
+                    <a class="btn-submit" href="javascript:void(0);"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="share">
+                <%include share%>
+              </div>
+              <a href="javascript:void(0);" class="click-guess <%if((i%3+1)==3){%>selected disable-pointer<%}%>">
+                <%if((i%3+1)==3){%>
+                <span class="font-guessed"></span>
+                <%}else{%>
+                <span class="font-becomeTalent"></span>
+                <%}%>
+              </a>
             </div>
-            <a href="javascript:void(0);" class="click-guess <%if((i%3+1)==3){%>selected disable-pointer<%}%>">
-              <%if((i%3+1)==3){%>
-              <span class="font-guessed"></span>
-              <%}else{%>
-              <span class="font-becomeTalent"></span>
-              <%}%>
-            </a>
           </div>
+          <%}%>
         </div>
-        <%}%>
+      </div>
+      <div class="wrap">
+        <div class="getmore-idea"><a href="javascript:void(0);" class="btn-getmore-idea"></a></div>
+        <div id="gotop"></div>
       </div>
     </div>
-    <div class="wrap">
-      <div class="getmore-idea"><a href="javascript:void(0);" class="btn-getmore-idea"></a></div>
-      <div id="gotop"></div>
-    </div>
-  </div>
-</section>
-<script type="text/javascript" src="assets/js/lib/dropdown.min.js"></script>
+  </section>
+</article>

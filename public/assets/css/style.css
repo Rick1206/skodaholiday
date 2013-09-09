@@ -618,14 +618,16 @@ small {
 }
 header {
   width: 100%;
-  height: 69px;
   min-width: 980px;
-  border-bottom: 1px solid #91aab1;
   position: relative;
-  z-index: 1;
+  z-index: 11;
 }
 header .wrap {
   position: relative;
+}
+header .ht {
+  height: 69px;
+  border-bottom: 1px solid #91aab1;
 }
 .logo-skoda {
   background: url(../images/logo.png) no-repeat;
@@ -652,18 +654,10 @@ header .wrap {
   width: 938px;
   height: 90px;
   padding-left: 42px;
-  margin-right: auto;
-  margin-left: auto;
-  *zoom: 1;
-}
-.nav-bar:before,
-.nav-bar:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.nav-bar:after {
-  clear: both;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  margin-left: -469px;
 }
 .nav-bar .nav {
   padding-top: 26px;
@@ -694,7 +688,7 @@ header .wrap {
 .nav-bar .nav .nav-list li:nth-child(5) {
   z-index: 1;
 }
-.nav-bar .nav .nav-list li a {
+.nav-bar .nav .nav-list li > a {
   width: 87px;
   height: 23px;
   display: block;
@@ -702,10 +696,10 @@ header .wrap {
   text-align: center;
   padding-top: 5px;
 }
-.nav-bar .nav .nav-list li a:hover {
+.nav-bar .nav .nav-list li > a:hover {
   background-position: -7px -44px;
 }
-.nav-bar .nav .nav-list li a span {
+.nav-bar .nav .nav-list li > a span {
   cursor: pointer;
 }
 .nav-bar .nav .nav-list li .logined {
@@ -714,6 +708,7 @@ header .wrap {
   display: block;
   background: url(../images/sprites.png) no-repeat -7px -85px;
   text-align: center;
+  cursor: pointer;
 }
 .nav-bar .nav .nav-list li .logined .usr-pic {
   float: left;
@@ -737,6 +732,71 @@ header .wrap {
   width: 25px;
   text-align: center;
   padding-top: 2px;
+}
+.nav-bar .nav .nav-list li .usr-popup {
+  width: 245px;
+  height: 162px;
+  padding: 12px 20px;
+  position: absolute;
+  left: 5px;
+  top: 34px;
+  background-color: #f6f6f6;
+  border: 5px solid #4ba82e;
+  visibility: hidden;
+}
+.nav-bar .nav .nav-list li .usr-popup h2 {
+  color: #4ba82e;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.nav-bar .nav .nav-list li .usr-popup .notice-tit {
+  width: 62px;
+  height: 20px;
+  display: inline-block;
+  background-image: url(../images/font-family.png);
+  background-position: -222px -47px;
+}
+.nav-bar .nav .nav-list li .usr-popup .text-wrap {
+  width: 244px;
+  height: 100px;
+  overflow: hidden;
+}
+.nav-bar .nav .nav-list li .usr-popup .text-wrap ul {
+  width: 99%;
+  list-style: none;
+}
+.nav-bar .nav .nav-list li .usr-popup .text-wrap li {
+  border-top: 1px solid #cdced0;
+  width: 100%;
+  color: #525558;
+  *zoom: 1;
+  padding: 5px 0;
+  margin: 0;
+}
+.nav-bar .nav .nav-list li .usr-popup .text-wrap li:before,
+.nav-bar .nav .nav-list li .usr-popup .text-wrap li:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.nav-bar .nav .nav-list li .usr-popup .text-wrap li:after {
+  clear: both;
+}
+.nav-bar .nav .nav-list li .usr-popup .text-wrap li .m1 {
+  float: left;
+  width: 165px;
+  padding-left: 3px;
+}
+.nav-bar .nav .nav-list li .usr-popup .text-wrap li .time {
+  float: right;
+  color: #8d8d8e;
+}
+.nav-bar .nav .nav-list li .usr-popup .btns {
+  text-align: right;
+  padding-top: 5px;
+}
+.nav-bar .nav .nav-list li.open .usr-popup {
+  visibility: visible;
 }
 footer {
   width: 100%;
@@ -811,6 +871,7 @@ footer .logo2 {
 }
 #page {
   width: 100%;
+  padding-top: 90px;
 }
 #page .bd .wrap {
   position: relative;
@@ -827,6 +888,9 @@ footer .logo2 {
 }
 #page .bd .wrap:after {
   clear: both;
+}
+#page.noTop {
+  padding-top: 0;
 }
 .body-background-index {
   background: #ececec url(../images/body-background.jpg) no-repeat center top;
@@ -904,7 +968,7 @@ footer .logo2 {
 }
 .expert-carousel .item .item-carousel li img {
   width: 130px;
-  height: 121px;
+  position: relative;
 }
 .expert-carousel .item .item-carousel li .img-hover {
   position: absolute;
@@ -916,11 +980,11 @@ footer .logo2 {
 .expert-carousel-pagination {
   position: absolute;
   top: 260px;
-  left: 200px;
+  left: 196px;
   width: 147px;
 }
 .expert-carousel-pagination a {
-  margin-left: 1px;
+  margin-left: 6px;
 }
 .call-board2 {
   position: absolute;
@@ -1707,4 +1771,22 @@ footer .logo2 {
 }
 .btn-update-avatar:hover {
   background-position: -412px -183px;
+}
+.btn-myhomepage {
+  width: 84px;
+  height: 26px;
+  display: inline-block;
+  background-position: -411px -511px;
+}
+.btn-myhomepage:hover {
+  background-position: -411px -546px;
+}
+.btn-logout {
+  width: 56px;
+  height: 25px;
+  display: inline-block;
+  background-position: -96px -442px;
+}
+.btn-logout:hover {
+  background-position: -160px -442px;
 }

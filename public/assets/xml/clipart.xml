@@ -2,32 +2,32 @@
 <data>
 	<item>
 		<id><![CDATA[]]></id>
-		<thumb><![CDATA[images/clipart1_thumb.png]]></thumb>
-		<url><![CDATA[images/clipart1.png]]></url>
+		<thumb><![CDATA[assets/images/clipart1_thumb.png]]></thumb>
+		<url><![CDATA[assets/images/clipart1.png]]></url>
 	</item>
 	<item>
 		<id><![CDATA[]]></id>
-		<thumb><![CDATA[images/clipart2_thumb.png]]></thumb>
-		<url><![CDATA[images/clipart2.png]]></url>
+		<thumb><![CDATA[assets/images/clipart2_thumb.png]]></thumb>
+		<url><![CDATA[assets/images/clipart2.png]]></url>
 	</item>
 	<item>
 		<id><![CDATA[]]></id>
-		<thumb><![CDATA[images/clipart1_thumb.png]]></thumb>
-		<url><![CDATA[images/clipart1.png]]></url>
+		<thumb><![CDATA[assets/images/clipart1_thumb.png]]></thumb>
+		<url><![CDATA[assets/images/clipart1.png]]></url>
 	</item>
 	<item>
 		<id><![CDATA[]]></id>
-		<thumb><![CDATA[images/clipart2_thumb.png]]></thumb>
-		<url><![CDATA[images/clipart2.png]]></url>
+		<thumb><![CDATA[assets/images/clipart2_thumb.png]]></thumb>
+		<url><![CDATA[assets/images/clipart2.png]]></url>
 	</item>
 	<item>
 		<id><![CDATA[]]></id>
-		<thumb><![CDATA[images/clipart1_thumb.png]]></thumb>
-		<url><![CDATA[images/clipart1.png]]></url>
+		<thumb><![CDATA[assets/images/clipart1_thumb.png]]></thumb>
+		<url><![CDATA[assets/images/clipart1.png]]></url>
 	</item>
 	<item>
 		<id><![CDATA[]]></id>
-		<thumb><![CDATA[images/clipart2_thumb.png]]></thumb>
-		<url><![CDATA[images/clipart2.png]]></url>
+		<thumb><![CDATA[assets/images/clipart2_thumb.png]]></thumb>
+		<url><![CDATA[assets/images/clipart2.png]]></url>
 	</item>
 </data>
