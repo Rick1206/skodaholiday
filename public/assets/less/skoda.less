@@ -108,7 +108,7 @@ header{
             float: left;
             width: 25px;
             text-align: center;
-            padding-top: 2px;
+            padding-top: 3px;
           }
         }
         .usr-popup{
@@ -227,6 +227,11 @@ footer{
     position: absolute;
     top: 24px;
     right: 31px;
+    a{
+      width: 100%;
+      height: 100%;
+      display: block; 
+    }
   }
 }
 
@@ -713,8 +718,25 @@ footer{
     }
   }
 }
+.ranking{
+  width: 260px - 10px;
+  height: 40px - 10px;
+  margin: 18px 0 0 14px;
+  padding: 10px 0 0 10px;
+  p{
+    width: 164px;
+    padding-top: 5px;
+    .text-overflow();
+  }
+}
+.notification{
+  width: 277px;
+  height: 172px;
+  background-image: url(../images/sprites_02.png);
+  background-position: -257px 0;
+  margin: 15px 0 0 25px;
+}
 .user-intro{
-
   .text-wrap{
     width: 150px;
     height: 70px;
@@ -735,6 +757,18 @@ footer{
   width: 558px;
   height: 510px;
   position: relative;
+  .tv-crash{
+    width: 363px;
+    height: 330px;
+    background-image: url(../images/tv.gif);
+    z-index: 2;
+    top: 9px;
+    left: 12px;
+    position: absolute;
+    img{
+      width: 100%;
+    }
+  }
   .tv-show{
     width: 558px;
     height: 510px;

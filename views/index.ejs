@@ -3,7 +3,7 @@
     <div class="bd">
       <div class="wrap">
         <div class="call-board">
-          <a class="btn-3d-becomeTalent" href="#"></a>
+          <a onclick="_gaq.push(['_trackEvent', 'Click', 'create-your-idea-hp'])" class="btn-3d-becomeTalent" href="#"></a>
           <img src="assets/images/call-board/01.png" alt=""/>
         </div>
         <div class="expert">
@@ -40,16 +40,16 @@
             <a href="javascript:void(0)" class="btn-controller-expert"></a>
             <a href="javascript:void(0)" class="btn-controller-expert"></a>
           </div>
-          <a class="btn-3d-guessTalent" href="#"> </a>
+          <a onclick="_gaq.push(['_trackEvent', 'Click', 'vote-for-your-daren-hp'])" class="btn-3d-guessTalent" href="#"> </a>
         </div>
         <div class="prize">
-            <a href="#" class="btn-3d-prize"><span class="item-cup"></span></a>
+            <a onclick="_gaq.push(['_trackEvent', 'Click', 'find-out-your-rewards-hp'])" href="#" class="btn-3d-prize"><span class="item-cup"></span></a>
         </div>
         <div class="call-board2">
           <ul class="call-board2-carousel">
-            <li><img src="assets/images/pic_02.jpg" alt=""/></li>
-            <li><img src="assets/images/pic_02.jpg" alt=""/></li>
-            <li><img src="assets/images/pic_02.jpg" alt=""/></li>
+            <li><a href="#" onclick="_gaq.push(['_trackEvent', 'Click', 'banner-hp'])"><img src="assets/images/pic_02.jpg" alt=""/></a></li>
+            <li><a href="#" onclick="_gaq.push(['_trackEvent', 'Click', 'banner-hp'])"><img src="assets/images/pic_02.jpg" alt=""/></a></li>
+            <li><a href="#" onclick="_gaq.push(['_trackEvent', 'Click', 'banner-hp'])"><img src="assets/images/pic_02.jpg" alt=""/></a></li>
           </ul>
           <div class="call-board2-pagination"></div>
         </div>
@@ -63,4 +63,7 @@
     </div>
   </section>
 </article>
+<script type="text/javascript">
+  _gaq.push(['_trackPageview', '/homepage']);
+</script>
 <script type="text/javascript" src="assets/js/lib/jquery.carouFredSel.js"></script>

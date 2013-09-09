@@ -63,7 +63,9 @@
                     expertLinkHover(i,'out');
                 })
             });
+
             $('.expert-mask').hover(itemCarouselPause,itemCarouselPlay);
+
             function expertLinkHover(i,direction){
                 var direction = direction == "on" ? 0:1;
                 itemCarousel.eq(i).trigger('currentPage',function(a){
