@@ -878,6 +878,7 @@ footer .logo2 a {
   width: 100%;
   padding-top: 90px;
 }
+
 #page .bd .wrap {
   position: relative;
   width: 980px;
@@ -894,6 +895,24 @@ footer .logo2 a {
 #page .bd .wrap:after {
   clear: both;
 }
+/*update by rick*/
+#page .ctp-content .wrap {
+  position: relative;
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+#page .ctp-content .wrap:before,
+#page .ctp-content .wrap:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+#page .ctp-content .wrap:after {
+  clear: both;
+}
+/**/
 #page.noTop {
   padding-top: 0;
 }
