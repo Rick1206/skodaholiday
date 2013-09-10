@@ -53,6 +53,8 @@ app.locals({
     logined:0
 });
 htmlStatic.set('index');
+htmlStatic.set('head&foot');
+
 
 htmlStatic.set('idea',{_page:0,logined:'1'});
 htmlStatic.set('idea1','idea',{_page:1,logined:'1'});

@@ -859,21 +859,6 @@ footer .logo2 a {
   height: 100%;
   display: block;
 }
-.content {
-  width: 980px;
-  margin-right: auto;
-  margin-left: auto;
-  *zoom: 1;
-}
-.content:before,
-.content:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.content:after {
-  clear: both;
-}
 #page {
   width: 100%;
   padding-top: 90px;
