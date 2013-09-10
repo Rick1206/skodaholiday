@@ -1005,6 +1005,7 @@ footer .logo2 a {
   position: absolute;
   top: 713px;
   left: 201px;
+  overflow: hidden;
 }
 .prize {
   width: 180px;
