@@ -1393,11 +1393,63 @@ footer .logo2 a {
   white-space: nowrap;
 }
 .notification {
-  width: 277px;
-  height: 172px;
+  width: 267px;
+  height: 162px;
   background-image: url(../images/sprites_02.png);
   background-position: -257px 0;
   margin: 15px 0 0 25px;
+  padding: 10px 0 0 10px;
+}
+.notification h2 {
+  color: #4ba82e;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.notification .notice-tit {
+  width: 62px;
+  height: 20px;
+  display: inline-block;
+  background-image: url(../images/font-family.png);
+  background-position: -222px -47px;
+}
+.notification .text-wrap {
+  width: 244px;
+  height: 100px;
+  overflow: hidden;
+}
+.notification .text-wrap ul {
+  width: 99%;
+  list-style: none;
+}
+.notification .text-wrap li {
+  border-top: 1px solid #cdced0;
+  width: 100%;
+  color: #525558;
+  *zoom: 1;
+  padding: 5px 0;
+  margin: 0;
+}
+.notification .text-wrap li:before,
+.notification .text-wrap li:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.notification .text-wrap li:after {
+  clear: both;
+}
+.notification .text-wrap li .m1 {
+  float: left;
+  width: 165px;
+  padding-left: 3px;
+}
+.notification .text-wrap li .time {
+  float: right;
+  color: #8d8d8e;
+}
+.notification .btns {
+  text-align: right;
+  padding-top: 5px;
 }
 .user-intro .text-wrap {
   width: 150px;
@@ -1513,6 +1565,73 @@ footer .logo2 a {
 }
 .pt10 {
   padding-top: 10px;
+}
+.suggestions {
+  padding: 40px 0;
+}
+.suggestions .suggestions-box {
+  width: 754px;
+  height: 516px;
+  margin-left: 124px;
+}
+.suggestions .suggestions-box .suggestions-box-hd {
+  width: 100%;
+  height: 64px;
+  background: url(../images/suggestions_bg.png) no-repeat -8px 0;
+}
+.suggestions .suggestions-box .suggestions-box-bd {
+  width: 608px;
+  padding: 0 93px 0 53px;
+  background: url(../images/suggestions_bg.png) repeat-y -766px 0;
+}
+.suggestions .suggestions-box .suggestions-box-bd .text-input {
+  width: 598px;
+  height: 91px;
+  border: 1px solid #d1d1d1;
+  padding: 4px;
+  -webkit-box-shadow: inset 0 0 10px #cccccc;
+  -moz-box-shadow: inset 0 0 10px #cccccc;
+  box-shadow: inset 0 0 10px #cccccc;
+}
+.suggestions .suggestions-box .suggestions-box-bd .submit-bar {
+  text-align: right;
+  padding: 10px 0 10px 0;
+  *zoom: 1;
+}
+.suggestions .suggestions-box .suggestions-box-bd .submit-bar:before,
+.suggestions .suggestions-box .suggestions-box-bd .submit-bar:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.suggestions .suggestions-box .suggestions-box-bd .submit-bar:after {
+  clear: both;
+}
+.suggestions .suggestions-box .suggestions-box-bd .color {
+  color: #4ba82e;
+}
+.suggestions .suggestions-box .suggestions-box-bd .suggestions-list {
+  list-style: none;
+}
+.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li {
+  padding: 20px 3px;
+  border-bottom: 1px solid #b2dbb0;
+  position: relative;
+  font-size: 14px;
+  line-height: 2.5;
+}
+.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:first-child {
+  border-top: 1px solid #b2dbb0;
+}
+.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .span11 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.suggestions .suggestions-box .suggestions-box-ft {
+  width: 100%;
+  height: 55px;
+  background: url(../images/suggestions_bg.png) no-repeat -1576px 0;
 }
 .text-sc {
   background: url(../images/text-simplayclerver.png) no-repeat;
