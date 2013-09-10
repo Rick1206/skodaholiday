@@ -48,23 +48,11 @@
   </div>
 </nav>
 </header>
-<article class="all">
-  <section id="page" class="noTop">
-    <div class="bd">
-      <div class="" style="height: 1200px;">
-        <!-- 若有足夠的 JavaScript 和 Flash 外掛程式支援可用，針對 Flash內容，SWFObject 的動態嵌入方法會取代替用的 HTML 內容。 -->
-        <div id="flashContent">
-          <a href="http://www.adobe.com/go/getflash">
-            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="取得 Adobe Flash 播放程式" />
-          </a>
-          <p>此頁面需要 Flash Player 9.0.124 版或更新版本。</p>
-        </div>
-      </div>
-    </div>
+<div class="content body-background-index">
+  <section id="page">
+    ##content
   </section>
-</article>
-
-
+</div>
 <footer>
   <div class="footer-corner"></div>
   <div class="wrap">
@@ -93,44 +81,7 @@
     <div class="logo2"><a href="#" onclick="_gaq.push(['_trackEvent', 'Click', 'skoda-logo-fo'])"></a></div>
   </div>
 </footer>
-<script type="text/javascript" src="assets/js/swfobject.js"></script>
-<script type="text/javascript">
-  //  <!-- Adobe 建議開發人員使用 SWFObject2 進行 Flash Player 的偵測。 -->
-  //  <!-- 如需詳細資訊，請參閱 Google code (http://code.google.com/p/swfobject/) 中的 SWFObject 頁面。 -->
-  //  <!-- 亦可從 Adobe Developer Connection 之下的 "偵測 Flash Player 版本，並以 SWFObject 2 內嵌 SWF 檔案" 取得資訊 -->
-  //  <!-- 設定所需 Flash Player 版本的最小值，或若不偵測版本的話，可設定為 0 -->
-  var swfVersionStr = "10.0.3";
-  //  <!-- xiSwfUrlStr 可用來定義快捷安裝程式 SWF。 -->
-  var xiSwfUrlStr = "";
-  var flashvars = {
-    debug: "true",
-    language: "cn",
-    categoryUrl: "assets/xml/clipart.xml",
-    bgImage: "assets/images/bg.jpg",
-    url:"assets/swf/draw.swf",
-    cloudSwf:"assets/swf/cloud.swf"
-  };
-  var params = {};
-  params.quality = "high";
-  params.bgcolor = "#ffffff";
-  params.play = "true";
-  params.loop = "true";
-  params.wmode = "Opaque";
-  params.scale = "showall";
-  params.menu = "true";
-  params.devicefont = "false";
-  params.salign = "";
-  params.allowscriptaccess = "sameDomain";
-  var attributes = {};
-  attributes.id = "draw";
-  attributes.name = "draw";
-  attributes.align = "middle";
-  swfobject.embedSWF(
-      "assets/swf/loading.swf", "flashContent",
-      "100%", "100%",
-      swfVersionStr, xiSwfUrlStr,
-      flashvars, params, attributes);
-</script>
+
 <script type="text/javascript" src="assets/js/lib/dropdown.min.js"></script>
 <script type="text/javascript" src="assets/js/lib/jquery.mousewheel.min.js"></script>
 <script type="text/javascript" src="assets/js/lib/jquery.jscrollpane.js"></script>

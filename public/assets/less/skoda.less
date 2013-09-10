@@ -230,15 +230,11 @@ footer{
     a{
       width: 100%;
       height: 100%;
-      display: block; 
+      display: block;
     }
   }
 }
 
-.content{
-  width: @wrapWidth;
-  .container-fixed();
-}
 #page{
   width: 100%;
   padding-top: 90px;
@@ -377,6 +373,7 @@ footer{
   position: absolute;
   top: 713px;
   left: 201px;
+  overflow: hidden;
 }
 .prize{
   width: 180px;
@@ -730,11 +727,53 @@ footer{
   }
 }
 .notification{
-  width: 277px;
-  height: 172px;
+  width: 267px;
+  height: 162px;
   background-image: url(../images/sprites_02.png);
   background-position: -257px 0;
   margin: 15px 0 0 25px;
+  padding: 10px 0 0 10px;
+    h2{
+      color: #4ba82e;
+      font-size: 14px;
+      padding-bottom: 5px;
+    }
+    .notice-tit{
+      width: 62px;
+      height: 20px;
+      display: inline-block;
+      background-image: url(../images/font-family.png);
+      background-position: -222px -47px;
+    }
+    .text-wrap{
+      width: 244px;
+      height: 100px;
+      overflow: hidden;
+      ul{
+        width: 99%;list-style: none;
+      }
+      li{
+        border-top: 1px solid #cdced0;
+        width: 100%;
+        color: #525558;
+        .clearfix();
+        padding: 5px 0;
+        margin: 0;
+        .m1{
+          float: left;
+          width: 165px;
+          padding-left: 3px;
+        }
+        .time{
+          float: right;
+          color: #8d8d8e;
+        }
+      }
+    }
+    .btns{
+      text-align: right;
+      padding-top: 5px;
+    }
 }
 .user-intro{
   .text-wrap{
@@ -855,4 +894,60 @@ footer{
 }
 .pt10{
   padding-top: 10px;
+}
+.suggestions{
+  padding: 40px 0;
+
+  .suggestions-box{
+    width: 754px;
+    height: 516px;
+    margin-left: 124px;
+    .suggestions-box-hd{
+      width: 100%;
+      height: 64px;
+      background: url(../images/suggestions_bg.png) no-repeat -8px 0;
+    }
+    .suggestions-box-bd{
+      width: 754px - 53px - 93px;
+      padding: 0 93px 0 53px;
+      background: url(../images/suggestions_bg.png) repeat-y -766px 0;
+      .text-input{
+        width: 598px;
+        height: 91px;
+        border: 1px solid #d1d1d1;
+        padding: 4px;
+        .box-shadow(inset 0 0 10px #ccc);
+      }
+      .submit-bar{
+        text-align: right;
+        padding: 10px 0 10px 0;
+        .clearfix();
+
+      }
+      .color{
+        color: #4ba82e;
+      }
+      .suggestions-list{
+        list-style: none;
+        li{
+          &:first-child{
+            border-top: 1px solid #b2dbb0;
+          }
+          padding: 20px 3px;
+          border-bottom: 1px solid #b2dbb0;
+          position: relative;
+          font-size: 14px;
+          line-height: 2.5;
+          .span11{
+            .text-overflow();
+          }
+        }
+      }
+    }
+    .suggestions-box-ft{
+      width: 100%;
+      height: 55px;
+      background: url(../images/suggestions_bg.png) no-repeat -1576px 0;
+    }
+  }
 }

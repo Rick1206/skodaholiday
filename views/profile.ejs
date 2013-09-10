@@ -1,4 +1,4 @@
-<article class="all body-background-profile">
+<div class="content body-background-profile">
   <section id="page">
     <div class="bd">
       <div class="wrap">
@@ -31,7 +31,17 @@
             <a href="#" class="btn-ranking fn-left"></a>
             <p class="fn-left">汽车上空间小,而我们出去自驾游放在车里的小物件又太多了</p>
           </div>
-          <div class="notification"></div>
+          <div class="notification">
+            <h2><span class="notice-tit"></span>(99):</h2>
+            <div class="text-wrap">
+              <ul>
+                <%for(var i=0;i<6;i++){%>
+                <li><div class="m1">你的主意已经通过审核!</div><div class="time">1小时以前</div></li>
+                <li><div class="m1">你的主意已经通过审核!你的主意已经通过审核!</div><div class="time">1小时以前</div></li>
+                <%}%>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="profile-right">
           <div class="tv">
@@ -61,7 +71,37 @@
           </div>
         </div>
       </div>
+      <div class="wrap suggestions">
+        <div class="suggestions-box">
+          <div class="suggestions-box-hd"></div>
+          <div class="suggestions-box-bd">
+            <form action="">
+              <textarea name="" class="text-input"></textarea>
+              <div class="submit-bar">
+                <div class="fn-left"><span class="color">18</span>条评论</div>
+                <div class="fn-right">
+                  <a href="#" class="btn-submit"></a>
+                </div>
+              </div>
+            </form>
+            <ul class="suggestions-list">
+              <%for(var i=0;i<3;i++){%>
+              <li>
+                <div class="row-fluid">
+                  <div class="span1"><img width="40" height="40" src="assets/images/pic_04.jpg" alt=""/></div>
+                  <div class="span11"><span class="color">隔壁家的小明:</span>主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！</div>
+                </div>
+                <a href="#" class="delete"></a>
+                <a href="#" class=""></a>
+              </li>
+              <%}%>
+            </ul>
+
+          </div>
+          <div class="suggestions-box-ft"></div>
+        </div>
+      </div>
     </div>
   </section>
-</article>
+</div>
 <script type="text/javascript" src="assets/js/lib/jquery.bpopup.js"></script>
