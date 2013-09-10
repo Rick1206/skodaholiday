@@ -40,13 +40,13 @@
 }
 .jspCap {
   background-image: url(../images/angle.png);
-  width: 9px;
+  width: 10px;
   height: 7px;
   display: block;
   background-repeat: no-repeat;
 }
 .jspCapTop {
-  background-position: 1px 0;
+  background-position: 2px 0;
 }
 .jspCapBottom {
   background-position: 2px -5px;
@@ -80,7 +80,7 @@
 }
 .jspTrack {
   position: relative;
-  background: url(../images/pan.png) repeat-y 1px 0;
+  background: url(../images/pan.png) repeat-y 2px 0;
 }
 .jspDrag {
   background: #d9d8d8;

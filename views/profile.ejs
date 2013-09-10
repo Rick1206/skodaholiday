@@ -8,7 +8,7 @@
               <div class="user-pic">
                 <img src="assets/images/user_pic_default_01.jpg" alt=""/>
                 <div class="updata">
-                  <a class="btn-update-avatar" href="javsscript:;"></a>
+                  <a class="btn-update-avatar jsPopUploadBox" href="javascript:void(0);"></a>
                 </div>
               </div>
               <div class="pt10">
@@ -22,8 +22,8 @@
                 <p>在细节上做到更加人性化会更能让大众接受它，老百姓用的顺心，对它产生好感！在细节上做到更加人性化会更能让大众接受它，老百姓用的顺心，对它产生好感！</p>
               </div>
               <div class="btns">
-                <a class="btn-more" href="javascript:;"></a>
-                <a class="btn-update-info" href="javascript:;"></a>
+                <a class="btn-more jsPopIdeaDetail" href="javascript:;"></a>
+                <a class="btn-update-info jsPopProfileForm" href="javascript:;"></a>
               </div>
             </div>
           </div>
@@ -89,19 +89,79 @@
               <li>
                 <div class="row-fluid">
                   <div class="span1"><img width="40" height="40" src="assets/images/pic_04.jpg" alt=""/></div>
-                  <div class="span11"><span class="color">隔壁家的小明:</span>主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！</div>
+                  <div class="span10"><span class="color">隔壁家的小明:</span>主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！</div>
                 </div>
                 <a href="#" class="delete"></a>
-                <a href="#" class=""></a>
+                <a href="#" class="against"></a>
               </li>
               <%}%>
             </ul>
-
+            <p class="text-center pt10"><a href="javascript:void(0);" class="btn-more2"></a></p>
           </div>
           <div class="suggestions-box-ft"></div>
         </div>
+        <div class="video-3d-men"><a href="#"></a></div>
       </div>
+
     </div>
   </section>
 </div>
+<!--jsPopIdeaDetail-->
+<div class="pop-idea-detail">
+  <a class="b-close" href="#"><span></span></a>
+  <div class="pop-content">
+    <div class="text-wrap">
+      <h1 class="title"></h1>
+      <div class="row-fluid">
+        <div class="span3"><img src="assets/images/pic_04.jpg" alt=""/></div>
+        <div class="span8">
+          <p>我是John Doe，20岁，来自广东广州。</p>
+          <p>我的灵感细胞从不受束缚，如果不是脑壳罩着早飚出来了。我一般通过鼻孔感知外界，可以毫无压力辨别23517种气味。我的坐骑是一辆会飞的车。小时候我的江湖绰号叫海豹，因为我总是被罚站，像海报（海豹）一样贴在墙上！
+            但是有一点毋庸置疑，那就是我绝顶聪明，不服来辩！</p>
+        </div>
+      </div>
+      <h2 class="title"></h2>
+      <p>
+        <img src="assets/images/test00001.jpg" alt=""/>
+      </p>
+    </div>
+  </div>
+</div>
+<!--jsPopProfileForm-->
+<div class="pop-profile-form">
+  <a class="b-close" href="#"><span></span></a>
+  <div class="pop-content">
+    <div class="row-fluid">
+      <div class="span4">
+        <img width="181" height="181" src="assets/images/pic_04.jpg" alt=""/>
+        <div class="btns-wrap">
+          <a href="javascript:void(0);" class="btn-update-avatar2 jsPopUploadBox"></a>
+        </div>
+
+      </div>
+      <div class="span8">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!--jsPopUploadBox-->
+<div class="pop-upload-box">
+  <a class="b-close" href="#"><span></span></a>
+  <div class="pop-content">
+    <div class="row-fluid">
+      <div class="span8">
+        <div class="file-input">...</div>
+      </div>
+      <div class="span4">
+        <a href="javascript:void(0);" class="btn-select-file"></a>
+      </div>
+    </div>
+    <form id="upload" action="src.php">
+      <input type="file" class="hide"/>
+      <input type="submit" value="" class="btn-submit-upload"/>
+    </form>
+  </div>
+</div>
 <script type="text/javascript" src="assets/js/lib/jquery.bpopup.js"></script>
+<script type="text/javascript" src="assets/js/lib/jquery.form.min.js"></script>
