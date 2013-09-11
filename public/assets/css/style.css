@@ -1836,6 +1836,24 @@ footer .logo2 a {
   text-align: center;
   padding-top: 10px;
 }
+.confirm {
+  width: 342px;
+  height: 209px;
+  border: 5px solid #4aa82c;
+  background-image: url(../images/grain_bg.jpg);
+  position: relative;
+  text-align: center;
+}
+.confirm .title {
+  font-size: 18px;
+  color: #419a20;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.confirm .btn-yes {
+  margin-right: 40px;
+}
 .text-sc {
   background: url(../images/text-simplayclerver.png) no-repeat;
   width: 191px;
@@ -2983,7 +3001,7 @@ legend + .control-group {
 }
 .btn-update-avatar2 {
   width: 79px;
-  height: 25px;
+  height: 23px;
   background-position: -412px -78px;
   display: block;
 }
@@ -3075,4 +3093,22 @@ legend + .control-group {
 }
 .btn-cancel:hover {
   background-position: -161px -520px;
+}
+.btn-yes {
+  width: 54px;
+  height: 28px;
+  background-position: -95px -566px;
+  display: inline-block;
+}
+.btn-yes:hover {
+  background-position: -158px -567px;
+}
+.btn-no {
+  width: 54px;
+  height: 28px;
+  background-position: -95px -610px;
+  display: inline-block;
+}
+.btn-no:hover {
+  background-position: -158px -610px;
 }

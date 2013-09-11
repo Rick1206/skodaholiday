@@ -1,4 +1,5 @@
 (function($){
+
     //notification
     $('.logined').click(function(){
         var target = $(this).parent('.usr');
@@ -191,7 +192,6 @@
             });
         });
 
-
         //get more data'  for example
         $('.suggestions').length>0&&(function(){
             var $suggestions =  $('.suggestions');
@@ -201,23 +201,55 @@
                 bgfix();
             });
             $('.delete',$suggestions).click(function(){
-                $(this).parent('li').remove();
-                bgfix();
+//                if(confirm('确认删除吗?')){
+//                    $(this).parent('li').remove();
+//                    bgfix();
+//                }
+                var $this = $(this);
+                $.confirm('确认删除吗?',function(result){
+                    if(result){
+                        $this.parent('li').remove();
+                        bgfix();
+                    }
+                });
                 return false;
             });
-
             function bgfix(){
                 var $page = $('#page');
                 var fixMask = $('.body-background-profile-fixed');
                 if($page.height()>=1200){
                     fixMask.css({
-                        height:$page.height()-1200
+                        height:($page.height()-1200)<30?0:($page.height()-1200)
                     })
                 }
-                console.log($page.height());
             }
         })();
 
+        $.confirm = function(title,callback){
+            var title = title || '';
+            var callback = callback ;
+            var confirm =  false;
+            var popbox = $('<div class="confirm"><p class="title">'+title+'</p><a href="#" class="btn-yes"></a><a href="#" class="btn-no"></a></div>');
+            popbox.find('.btn-yes').click(function(){
+                confirm= true;
+                popbox.bPopup().close();
+                return false;
+            });
+            popbox.find('.btn-no').click(function(){
+                confirm= false;
+                popbox.bPopup().close();
+                return false;
+            })
+            $('body').append(popbox);
+            popbox.bPopup({
+                onClose:function(){
+                    popbox.remove();
+                    callback.call(this,confirm);
+                }
+            });
+
+
+        }
         //  upload
 
         $('.pop-upload-box').length>0&&(function(){
@@ -250,6 +282,7 @@
                     position:['auto',0],
                     onClose:function(){
                         $form.find('input[type=reset]').click();
+                        $form.find('.error').removeClass('error');
                     }
                 });
             })
