@@ -191,43 +191,74 @@
             });
         });
 
-    //  upload
 
-    $('.pop-upload-box').length>0&&(function(){
-        var $box = $('.pop-upload-box');
-        var $form = $('#upload');
-        var $form_file = $form.find('input[type=file]');
-        $('.jsPopUploadBox').click(function(){
-            $box.bPopup({
-                onClose:function(){
-                    $box.find('.file-input').html('...');
-                }
+        //get more data'  for example
+        $('.suggestions').length>0&&(function(){
+            var $suggestions =  $('.suggestions');
+            var $suggestions_list = $suggestions.find('.suggestions-list');
+            $('.btn-more2',$suggestions).click(function(){
+                $suggestions_list.find('li').clone(true).appendTo($suggestions_list);
+                bgfix();
             });
-        });
-        $form.ajaxForm(function(){
-            alert('Upload succeed!');
-        });
-        $box.find('.btn-select-file').click(function(){
-            $form_file.click();
-        });
-        $form_file.change(function(){
-            $box.find('.file-input').html($(this).val());
-        });
+            $('.delete',$suggestions).click(function(){
+                $(this).parent('li').remove();
+                bgfix();
+                return false;
+            });
 
-    })();
-    $('.pop-profile-form').length>0&&(function(){
-        var $form = $('.pop-profile-form');
-        $('.jsPopProfileForm').click(function(){
-            $('.pop-profile-form').bPopup({
-                follow: [true,false],
-                position:['auto',0],
-                onClose:function(){
-                    $form.find('input[type=reset]').click();
+            function bgfix(){
+                var $page = $('#page');
+                var fixMask = $('.body-background-profile-fixed');
+                if($page.height()>=1200){
+                    fixMask.css({
+                        height:$page.height()-1200
+                    })
                 }
+                console.log($page.height());
+            }
+        })();
+
+        //  upload
+
+        $('.pop-upload-box').length>0&&(function(){
+            var $box = $('.pop-upload-box');
+            var $form = $('#upload');
+            var $form_file = $form.find('input[type=file]');
+            $('.jsPopUploadBox').click(function(){
+                $box.bPopup({
+                    onClose:function(){
+                        $box.find('.file-input').html('...');
+                    }
+                });
             });
-        })
-        $('.cars',$form).jScrollPane({autoReinitialise: true});
-        $('.form-horizontal',$form).validator();
-    })();
+            $form.ajaxForm(function(){
+                alert('Upload succeed!');
+            });
+            $box.find('.btn-select-file').click(function(){
+                $form_file.click();
+            });
+            $form_file.change(function(){
+                $box.find('.file-input').html($(this).val());
+            });
+
+        })();
+        $('.pop-profile-form').length>0&&(function(){
+            var $form = $('.pop-profile-form');
+            $('.jsPopProfileForm').click(function(){
+                $('.pop-profile-form').bPopup({
+                    follow: [true,false],
+                    position:['auto',0],
+                    onClose:function(){
+                        $form.find('input[type=reset]').click();
+                    }
+                });
+            })
+            $('.cars',$form).jScrollPane({autoReinitialise: true}).find('li').click(function(){
+                $(this).toggleClass('selected');
+            }).end().on('mousedown',function(){
+                    $(this).removeAttr('tabindex');
+                });
+            $('.form-horizontal',$form).validator();
+        })();
 
 })(window.jQuery);

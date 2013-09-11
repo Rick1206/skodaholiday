@@ -6,9 +6,9 @@
           <div class="user-info">
             <div class="fn-left">
               <div class="user-pic">
-                <img src="assets/images/user_pic_default_01.jpg" alt=""/>
+                <img src="assets/images/<%if(_page==0){%>user_pic_default_01.jpg<%}else{%>pic_04.jpg<%}%>" alt=""/>
                 <div class="updata">
-                  <a class="btn-update-avatar" href="javascript:void(0);"></a>
+                  <a class="<%if(_page==0){%>btn-update-avatar2<%}else{%>btn-update-avatar<%}%> jsPopUploadBox" href="javascript:void(0);"></a>
                 </div>
               </div>
               <div class="pt10">
@@ -29,8 +29,8 @@
           </div>
           <div class="ranking">
             <a href="#" class="btn-ranking fn-left"></a>
-            <p class="fn-left">汽车上空间小,而我们出去自驾游放在车里的小物件又太多了</p>
           </div>
+          <!--notification-->
           <div class="notification">
             <h2><span class="notice-tit"></span>(99):</h2>
             <div class="text-wrap">
@@ -72,6 +72,8 @@
         </div>
       </div>
       <div class="wrap suggestions">
+        <!--play video-->
+        <div class="video-3d-men"><a href="#"></a></div>
         <div class="suggestions-box">
           <div class="suggestions-box-hd"></div>
           <div class="suggestions-box-bd">
@@ -91,8 +93,8 @@
                   <div class="span1"><img width="40" height="40" src="assets/images/pic_04.jpg" alt=""/></div>
                   <div class="span10"><span class="color">隔壁家的小明:</span>主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！主意真好！</div>
                 </div>
-                <a href="#" class="delete"></a>
-                <a href="#" class="against"></a>
+                <a href="#" class="delete" title="删除"></a>
+                <a href="#" class="against" title="举报"></a>
               </li>
               <%}%>
             </ul>
@@ -100,9 +102,8 @@
           </div>
           <div class="suggestions-box-ft"></div>
         </div>
-        <div class="video-3d-men"><a href="#"></a></div>
       </div>
-
+      <div class="body-background-profile-fixed"></div>
     </div>
   </section>
 </div>
@@ -136,7 +137,7 @@
         <div class="span4">
           <img width="181" height="181" src="assets/images/pic_04.jpg" alt=""/>
           <div class="btns-wrap">
-            <a href="javascript:void(0);" class="btn-update-avatar2"></a>
+            <a href="javascript:void(0);" class="btn-update-avatar3 jsPopUploadBox"></a>
           </div>
         </div>
         <div class="span8">
@@ -226,19 +227,117 @@
                 </ul>
               </div>
             </div>
-            <%for(var i=0;i<5;i++){%>
+
             <div class="control-group">
-              <p><%=i+1%>.问题样本</p>
+              <p>1.你突然得知有人会送你一辆车，你认为它会是？</p>
               <div class="span12">
-                <%for(var j=0;j<4;j++){%>
                 <label class="radio inline">
-                  <input type="radio" name="optionsRadios<%=i+1%>" value="option<%=j+1%>">
-                  选择<%=j+1%>
+                  <input type="radio" name="optionsRadios1" value="option">
+                  华丽的跑车
                 </label>
-                <%}%>
+                <label class="radio inline">
+                  <input type="radio" name="optionsRadios1" value="option">
+                  家用高级轿车
+                </label>
+                <label class="radio inline">
+                  <input type="radio" name="optionsRadios1" value="option">
+                  儿童三轮车
+                </label>
+                <label class="radio inline">
+                  <input type="radio" name="optionsRadios1" value="option">
+                  智能房车
+                </label>
               </div>
             </div>
-            <%}%>
+
+          <div class="control-group">
+            <p>2.你通常什么情况下最会胡思乱想？ </p>
+            <div class="span12">
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                半夜三更
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                上厕所
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                吵架时
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                不定时
+              </label>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <p>3.你自认为脸上最满意的部分是？ </p>
+            <div class="span12">
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                鼻子
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                嘴
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                眼睛
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                耳朵
+              </label>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <p>4.探险途中大家被挡住去路，只有你有办法，你觉得障碍物会是？ </p>
+            <div class="span12">
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                荆棘丛
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                湍急的河流
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                大石块
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                漆黑的山洞
+              </label>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <p>5.现在你面临一项重大挑战，你觉得尝试几次才会成功？ </p>
+            <div class="span12">
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                一次就成功
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                两次
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                三次
+              </label>
+              <label class="radio inline">
+                <input type="radio" name="optionsRadios1" value="option">
+                N多次
+              </label>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -248,7 +347,7 @@
         <div class="span8">
           <div class="row-fluid">
             <div class="span4">我的灵感来自哪里？</div>
-            <div class="span6"><a class="btn-select-file jsPopUploadBox" href="javascript:void(0);" style="margin-left: -20px;"></a></div>
+            <div class="span6"><a class="btn-upload-file jsPopUploadBox" href="javascript:void(0);" style="margin-left: -20px;"></a></div>
           </div>
           <div class="row-fluid">
             <div class="span12">
@@ -258,7 +357,7 @@
           <div class="control-group">
             <p class="">通过以下方式接收通知</p>
             <label class="checkbox">
-              <input type="checkbox">邮箱通知
+              <input type="checkbox" checked>邮箱通知
             </label>
           </div>
           <div class="row-fluid">
@@ -288,6 +387,7 @@
         <a href="javascript:void(0);" class="btn-select-file"></a>
       </div>
     </div>
+    <p class="help-block">图片不得大于2M </p>
     <form id="upload" action="src.php">
       <input type="file" class="hide"/>
       <button type="submit" value="" class="btn-submit-upload"></button>

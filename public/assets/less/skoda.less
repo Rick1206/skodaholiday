@@ -259,7 +259,15 @@ footer{
   background:#ececec url(../images/body-background-idea-repeat.jpg) repeat-y center top;
 }
 .body-background-profile{
-  background:#cccccc url(../images/body-background-profile.jpg) no-repeat center top;
+  background:#ececec url(../images/body-background-profile.jpg) no-repeat center top;
+}
+.body-background-profile-fixed{
+  background:#ececec url(../images/body-background-profile-fixed.jpg) repeat-y center ;
+  position: absolute;
+  width: 100%;
+  top: 1384px;
+  z-index: 1;
+  height: 0 ;
 }
 .call-board{
   position: absolute;
@@ -706,6 +714,8 @@ footer{
     img{
       position: relative;
       z-index: 1;
+      width: 116px;
+      height: 116px;
     }
     .updata{
       position: absolute;
@@ -845,7 +855,7 @@ footer{
       left: 399px;
       z-index: 10;
       .share{
-        padding-top: 10px;
+        padding-top: 7px;
         .share-bar{
           background-position: -230px 0;
           width: 46px;
@@ -895,11 +905,13 @@ footer{
 .pt10{
   padding-top: 10px;
 }
+
 .suggestions{
   padding: 40px 0;
+  position: relative;
+  z-index: 2;
   .suggestions-box{
     width: 754px;
-    height: 516px;
     margin-left: 124px;
     .suggestions-box-hd{
       width: 100%;
@@ -966,7 +978,7 @@ footer{
     .suggestions-box-ft{
       width: 100%;
       height: 25px;
-      background: url(../images/suggestions_bg.png) no-repeat -1576px -20px;
+      background: url(../images/suggestions_bg.png) no-repeat -1576px -35px;
     }
   }
 }
@@ -1072,16 +1084,21 @@ footer{
   }
   .cars{
     width: 323px;
-    height: 93px;
+    height: 107px;
     border: 1px solid #c6c7c8;
     overflow: hidden;
     .box-shadow(inset 1px 1px 8px #c6c7c8);
     ul{
-      width: 173px * 7;
+      width: (173px + 6px) * 7;
       .clearfix();
     }
     ul>li{
       float: left;
+      border:2px solid #cccccc;
+      margin-right: 2px;
+      &.selected{
+        border-color: #68b254;
+      }
     }
     img{
       width: 173px;
