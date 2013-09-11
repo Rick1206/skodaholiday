@@ -191,14 +191,6 @@
             });
         });
 
-        $('.jsPopProfileForm').click(function(){
-            $('.pop-profile-form').bPopup({
-                follow: [true,false],
-                position:['auto',0]
-            });
-        })
-
-
     //  upload
 
     $('.pop-upload-box').length>0&&(function(){
@@ -224,8 +216,18 @@
 
     })();
     $('.pop-profile-form').length>0&&(function(){
-        $('.cars').jScrollPane({autoReinitialise: true});
-
+        var $form = $('.pop-profile-form');
+        $('.jsPopProfileForm').click(function(){
+            $('.pop-profile-form').bPopup({
+                follow: [true,false],
+                position:['auto',0],
+                onClose:function(){
+                    $form.find('input[type=reset]').click();
+                }
+            });
+        })
+        $('.cars',$form).jScrollPane({autoReinitialise: true});
+        $('.form-horizontal',$form).validator();
     })();
 
 })(window.jQuery);

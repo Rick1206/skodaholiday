@@ -1671,11 +1671,11 @@ footer .logo2 a {
   left: 56px;
   background: url(../images/sprites.png) no-repeat -6px -397px;
 }
-.b-close {
+.pop-close {
   position: absolute;
   z-index: 99;
 }
-.b-close span {
+.pop-close span {
   width: 35px;
   height: 35px;
   background-image: url(../images/sprites.png);
@@ -1689,7 +1689,7 @@ footer .logo2 a {
   display: none;
   background: url(../images/profile_popup.png) no-repeat;
 }
-.pop-idea-detail .b-close {
+.pop-idea-detail .pop-close {
   top: 0;
   right: 0;
 }
@@ -1727,7 +1727,7 @@ footer .logo2 a {
   padding-top: 206px;
   display: none;
 }
-.pop-profile-form .b-close {
+.pop-profile-form .pop-close {
   right: -15px;
   top: 111px;
 }
@@ -1784,6 +1784,13 @@ footer .logo2 a {
   width: 173px;
   height: 93px;
 }
+.pop-profile-form .pop-bg-ft {
+  width: 675px;
+  height: 310px;
+  background: url(../images/profile_form_bg_ft.png) no-repeat 0 -70px;
+  margin-top: -10px;
+  padding: 0 50px;
+}
 .pop-upload-box {
   width: 345px;
   height: 164px;
@@ -1791,7 +1798,7 @@ footer .logo2 a {
   background-color: #f3f3f3;
   display: none;
 }
-.pop-upload-box .b-close {
+.pop-upload-box .pop-close {
   top: -22px;
   right: -22px;
 }
