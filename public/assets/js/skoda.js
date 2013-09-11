@@ -223,6 +223,9 @@
         });
 
     })();
+    $('.pop-profile-form').length>0&&(function(){
+        $('.cars').jScrollPane({autoReinitialise: true});
 
+    })();
 
 })(window.jQuery);

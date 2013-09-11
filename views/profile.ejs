@@ -8,7 +8,7 @@
               <div class="user-pic">
                 <img src="assets/images/user_pic_default_01.jpg" alt=""/>
                 <div class="updata">
-                  <a class="btn-update-avatar jsPopUploadBox" href="javascript:void(0);"></a>
+                  <a class="btn-update-avatar" href="javascript:void(0);"></a>
                 </div>
               </div>
               <div class="pt10">
@@ -135,7 +135,7 @@
       <div class="span4">
         <img width="181" height="181" src="assets/images/pic_04.jpg" alt=""/>
         <div class="btns-wrap">
-          <a href="javascript:void(0);" class="btn-update-avatar2 jsPopUploadBox"></a>
+          <a href="javascript:void(0);" class="btn-update-avatar2"></a>
         </div>
 
       </div>
@@ -208,7 +208,7 @@
             </div>
           </div>
           <div class="control-group">
-            <div class="span4">你什么时候会买车?</div>
+            <label class="span4">你什么时候会买车?</label>
             <div class="span8">
               <select class="span4">
                 <option>1~3个月</option>
@@ -218,8 +218,12 @@
           </div>
           <div class="control-group">
             <p>你对哪款Skoda汽车感兴趣？</p>
-            <div class="span12">
-
+            <div class="cars">
+              <ul>
+                <%for(var i=0;i<7;i++){%>
+                <li><img src="assets/images/cars/0<%=i+1%>.jpg" alt=""/></li>
+                <%}%>
+              </ul>
             </div>
           </div>
           <div class="control-group">
@@ -264,13 +268,30 @@
               </label>
             </div>
           </div>
+          <div class="row-fluid">
+            <div class="span4">我的灵感来自哪里？</div>
+            <div class="span6"><a class="btn-select-file jsPopUploadBox" href="javascript:void(0);" style="margin-left: -20px;"></a></div>
+          </div>
+          <div class="row-fluid">
+            <div class="span12">
+              <textarea name="" class="input-block-level">在此输入文字</textarea>
+            </div>
+          </div>
           <div class="control-group">
             <p class="">通过以下方式接收通知</p>
             <label class="checkbox">
               <input type="checkbox">邮箱通知
             </label>
           </div>
-          <button type="submit" class="btn-submit"></button>
+          <div class="row-fluid">
+            <div class="span12">
+              <p class="color">我已阅读并同意 <a href="#" target="_blank">相关条款</a></p>
+            </div>
+          </div>
+          <div class="row-fluid">
+            <div class="span2"><button type="submit" class="btn-save"></button></div>
+            <div class="span2"><button type="submit" class="btn-cancel"></button></div>
+          </div>
         </form>
       </div>
     </div>

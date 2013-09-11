@@ -1738,8 +1738,51 @@ footer .logo2 a {
   color: #000;
   font-size: 14px;
 }
+.pop-profile-form .pop-content .row-fluid {
+  margin-bottom: 10px;
+}
 .pop-profile-form .pop-content .btns-wrap {
   padding: 15px 0 0 50px;
+}
+.pop-profile-form .pop-content .input-block-level {
+  height: 81px;
+  color: #808080;
+}
+.pop-profile-form .color {
+  color: #68b254;
+}
+.pop-profile-form .color a {
+  color: #68b254;
+  text-decoration: 1px solid #ccddca;
+}
+.pop-profile-form .cars {
+  width: 323px;
+  height: 93px;
+  border: 1px solid #c6c7c8;
+  overflow: hidden;
+  -webkit-box-shadow: inset 1px 1px 8px #c6c7c8;
+  -moz-box-shadow: inset 1px 1px 8px #c6c7c8;
+  box-shadow: inset 1px 1px 8px #c6c7c8;
+}
+.pop-profile-form .cars ul {
+  width: 1211px;
+  *zoom: 1;
+}
+.pop-profile-form .cars ul:before,
+.pop-profile-form .cars ul:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.pop-profile-form .cars ul:after {
+  clear: both;
+}
+.pop-profile-form .cars ul > li {
+  float: left;
+}
+.pop-profile-form .cars img {
+  width: 173px;
+  height: 93px;
 }
 .pop-upload-box {
   width: 345px;
@@ -2968,4 +3011,34 @@ legend + .control-group {
 }
 .btn-select-file:hover {
   background-position: -412px -700px;
+}
+.btn-upload-file {
+  width: 83px;
+  height: 26px;
+  display: inline-block;
+  background-position: -412px -810px;
+  border: none;
+}
+.btn-upload-file:hover {
+  background-position: -412px -847px;
+}
+.btn-save {
+  width: 56px;
+  height: 26px;
+  display: inline-block;
+  background-position: -95px -485px;
+  border: none;
+}
+.btn-save:hover {
+  background-position: -95px -520px;
+}
+.btn-cancel {
+  width: 56px;
+  height: 26px;
+  display: inline-block;
+  background-position: -160px -485px;
+  border: none;
+}
+.btn-cancel:hover {
+  background-position: -161px -520px;
 }

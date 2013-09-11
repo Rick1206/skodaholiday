@@ -65,7 +65,7 @@ htmlStatic.set('idea_logout','idea',{_page:0});
 htmlStatic.set('profile',{logined:1,user:1,_page:0});
 htmlStatic.set('profile1','profile',{logined:1,user:1,_page:1});
 htmlStatic.set('profile2','profile',{logined:1,user:1,_page:2});
-htmlStatic.set('profile_default','profile',{logined:1,user:0,_page:0});
+
 
 htmlStatic.set('draw');
 
