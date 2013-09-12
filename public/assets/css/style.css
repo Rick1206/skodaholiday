@@ -1798,6 +1798,8 @@ footer .logo2 a {
   float: left;
   border: 2px solid #cccccc;
   margin-right: 2px;
+  width: 173px;
+  height: 93px;
 }
 .pop-profile-form .cars ul > li.selected {
   border-color: #68b254;
