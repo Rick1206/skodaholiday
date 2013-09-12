@@ -890,12 +890,15 @@ footer .logo2 a {
 }
 .body-background-idea {
   background: #ececec url(../images/body-background-idea-top.jpg) no-repeat center top;
+  min-width: 980px;
 }
 .body-background-idea-repeat {
   background: #ececec url(../images/body-background-idea-repeat.jpg) repeat-y center top;
+  min-width: 980px;
 }
 .body-background-profile {
   background: #ececec url(../images/body-background-profile.jpg) no-repeat center top;
+  min-width: 980px;
 }
 .body-background-profile-fixed {
   background: #ececec url(../images/body-background-profile-fixed.jpg) repeat-y center;
