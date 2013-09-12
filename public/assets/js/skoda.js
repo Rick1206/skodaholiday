@@ -246,8 +246,6 @@
                     callback.call(this,confirm);
                 }
             });
-
-
         }
         //  upload
 
