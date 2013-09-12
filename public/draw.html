@@ -121,7 +121,7 @@
   params.menu = "true";
   params.devicefont = "false";
   params.salign = "";
-  params.allowscriptaccess = "sameDomain";
+  params.allowscriptaccess = "always";
   var attributes = {};
   attributes.id = "draw";
   attributes.name = "draw";
@@ -136,6 +136,85 @@
 <script type="text/javascript" src="assets/js/lib/jquery.mousewheel.min.js"></script>
 <script type="text/javascript" src="assets/js/lib/jquery.jscrollpane.js"></script>
 <script type="text/javascript" src="assets/js/skoda.js"></script>
+<script type="text/javascript" charset="utf-8">
+			$(function() {
+				//--- login function ---//
+				window.is_login = function() {
+					$.ajax({
+						url : './function_all/',
+						data : {
+							Fun_type : 'Is_login',
+						},
+						type : 'POST',
+						success : function(data) {
+							var myObject = JSON.parse(data);
 
+							if (myObject.state == "1") {
+								uploadsubmission();
+							} else {
+								window.open('./function_all/login.html', 'newwindow', 'height=400, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=no,resizable=no,location=no, status=no');
+							}
+						},
+						error : function(e) {
+							alert(e);
+						}
+					});
+				}
+
+				window.uploadsubmission = function() {
+					var data = GetSWF("draw").getUserInfo();
+					var myObject = JSON.parse(data);
+					data = myObject[0];
+					//--- upload loading ---//
+					$("#ctp-flash-loading-mask").show();
+					//--- ajax to host --- //
+					$.ajax({
+						url : './function_all/',
+						data : {
+							Fun_type : 'User_submission',
+							Draw_pic:data.pic,
+							Draw_name :data.DrawName, 
+							Draw_desc : data.DrawDesc, 
+							User_Inspie : data.DrawInspire, 
+							User_Talent : data.DrawTalent, 
+							User_name : data.UserName, 
+							Head_pic : data.UserHead, 
+							Profile_q1 : data.q1, 
+							Profile_q2 : data.q2, 
+							Profile_q3 : data.q3, 
+							Profile_q4 : data.q4, 
+							Profile_q5 : data.q5,
+						},
+						type : 'POST',
+						success : function(data) { 
+							myObject = JSON.parse(data);
+							$("#ctp-flash-loading-mask").hide();
+							if(myObject.state == "1"){
+								location.href = "profile.html";
+							}
+						},
+						error : function(e) {
+							//alert(e);
+							$("#ctp-flash-loading-mask").hide();
+							console.log(e);
+						}
+					});
+
+				}
+			});
+			//--- get swf function ---//
+			function GetSWF(strName) {
+				if (window.document[strName] != null)
+					if (window.document[strName].length == null)
+						return window.document[strName];
+					else
+						return window.document[strName][1];
+				else if (document[strName].length == null)
+					return document[strName];
+				else
+					return document[strName][1];
+			};
+
+		</script>
 </body>
 </html>
