@@ -50,7 +50,8 @@ app.post('/',welcome.refresh);
 
 //html
 app.locals({
-    logined:0
+    logined:0,
+    share:0
 });
 htmlStatic.set('index');
 htmlStatic.set('head&foot');

@@ -861,6 +861,7 @@ footer .logo2 a {
 }
 #page {
   width: 100%;
+  min-width: 980px;
   padding-top: 90px;
 }
 #page .bd .wrap {
@@ -885,6 +886,7 @@ footer .logo2 a {
 .body-background-index {
   background: #ececec url(../images/body-background.jpg) no-repeat center top;
   min-height: 1217px;
+  min-width: 980px;
 }
 .body-background-idea {
   background: #ececec url(../images/body-background-idea-top.jpg) no-repeat center top;
@@ -1474,7 +1476,7 @@ footer .logo2 a {
   color: #68b254;
 }
 .user-intro .btns {
-  padding-top: 22px;
+  padding-top: 19px;
 }
 .tv {
   width: 558px;
@@ -1777,6 +1779,7 @@ footer .logo2 a {
 }
 .pop-profile-form .cars ul {
   width: 1253px;
+  list-style: none;
   *zoom: 1;
 }
 .pop-profile-form .cars ul:before,
@@ -1806,6 +1809,11 @@ footer .logo2 a {
   background: url(../images/profile_form_bg_ft.png) no-repeat 0 -70px;
   margin-top: -10px;
   padding: 0 50px;
+  font-size: 14px;
+  color: #000;
+}
+.pop-profile-form .text_middle {
+  line-height: 25px;
 }
 .pop-upload-box {
   width: 345px;
@@ -1838,7 +1846,8 @@ footer .logo2 a {
 }
 .confirm {
   width: 342px;
-  height: 209px;
+  padding-top: 40px;
+  padding-bottom: 30px;
   border: 5px solid #4aa82c;
   background-image: url(../images/grain_bg.jpg);
   position: relative;
@@ -1847,12 +1856,67 @@ footer .logo2 a {
 .confirm .title {
   font-size: 18px;
   color: #419a20;
-  margin-top: 60px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
+  padding: 0 22px;
+}
+.confirm .title a {
+  color: #419a20;
 }
 .confirm .btn-yes {
   margin-right: 40px;
+}
+div[class*=pop-video-box] {
+  border: 5px solid #4ea736;
+  width: 604px;
+  height: 483px;
+  display: none;
+  background-image: url(../images/grain_bg.jpg);
+}
+div[class*=pop-video-box] .pop-close {
+  top: -20px;
+  right: -20px;
+}
+div[class*=pop-video-box] .content {
+  padding: 32px;
+  position: relative;
+}
+div[class*=pop-video-box] .content .video {
+  width: 540px;
+  height: 374px;
+}
+div[class*=pop-video-box] .share {
+  position: absolute;
+  left: 516px;
+  top: 425px;
+}
+div[class*=pop-video-box] .share .share-bar {
+  background-position: 0 -167px;
+  height: 54px;
+  width: 236px;
+  top: -13px;
+  left: -236px;
+}
+div[class*=pop-video-box] .share .share-bar .icon-tsina {
+  margin-left: 18px;
+}
+.pop-video-box02 .btn-skip {
+  position: absolute;
+  left: 516px;
+  top: 425px;
+}
+.pop-video-box02 .step1 .share {
+  left: 450px;
+}
+.pop-video-box02 .step2 {
+  display: none;
+  text-align: center;
+}
+.pop-video-box02 .step2 .message {
+  color: #4ba82e;
+  font-size: 18px;
+  text-align: center;
+  margin: 40px 0;
 }
 .text-sc {
   background: url(../images/text-simplayclerver.png) no-repeat;
@@ -2759,8 +2823,8 @@ legend + .control-group {
 .form-horizontal .form-actions {
   padding-left: 80px;
 }
-[class^=icon-],
-[class^=btn-] {
+[class*=icon-],
+[class*=btn-] {
   background-image: url(../images/sprites.png);
   border: 0;
 }
@@ -3021,19 +3085,28 @@ legend + .control-group {
   width: 84px;
   height: 28px;
   display: inline-block;
-  background-position: -411px -511px;
+  background-position: -412px -511px;
 }
 .btn-myhomepage:hover {
-  background-position: -411px -546px;
+  background-position: -412px -546px;
+}
+.btn-myhomepage2 {
+  width: 123px;
+  height: 38px;
+  display: inline-block;
+  background-position: -247px -417px;
+}
+.btn-myhomepage2:hover {
+  background-position: -247px -477px;
 }
 .btn-logout {
   width: 56px;
   height: 25px;
   display: inline-block;
-  background-position: -96px -442px;
+  background-position: -98px -444px;
 }
 .btn-logout:hover {
-  background-position: -160px -442px;
+  background-position: -162px -444px;
 }
 .btn-ranking {
   width: 86px;
@@ -3111,4 +3184,13 @@ legend + .control-group {
 }
 .btn-no:hover {
   background-position: -158px -610px;
+}
+.btn-skip {
+  width: 56px;
+  height: 27px;
+  background-position: -94px -656px;
+  display: inline-block;
+}
+.btn-skip:hover {
+  background-position: -159px -656px;
 }

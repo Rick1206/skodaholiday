@@ -237,6 +237,7 @@ footer{
 
 #page{
   width: 100%;
+  min-width: @wrapWidth;
   padding-top: 90px;
   .bd .wrap{
     position: relative;
@@ -251,6 +252,7 @@ footer{
 .body-background-index{
   background:#ececec url(../images/body-background.jpg) no-repeat center top;
   min-height: 1217px;
+  min-width: @wrapWidth;
 }
 .body-background-idea{
   background:#ececec url(../images/body-background-idea-top.jpg) no-repeat center top;
@@ -798,7 +800,7 @@ footer{
     color: #68b254;
   }
   .btns{
-    padding-top: 22px;
+    padding-top: 19px;
   }
 }
 
@@ -1090,6 +1092,7 @@ footer{
     .box-shadow(inset 1px 1px 8px #c6c7c8);
     ul{
       width: (173px + 6px) * 7;
+      list-style: none;
       .clearfix();
     }
     ul>li{
@@ -1111,6 +1114,11 @@ footer{
     background: url(../images/profile_form_bg_ft.png) no-repeat 0 -70px;
     margin-top: -10px;
     padding: 0 50px;
+    font-size: 14px;
+    color: #000;
+  }
+  .text_middle{
+    line-height: 25px;
   }
 }
 .pop-upload-box{
@@ -1143,7 +1151,8 @@ footer{
 
 .confirm{
   width: 342px;
-  height: 209px;
+  padding-top: 40px;
+  padding-bottom: 30px;
   border: 5px solid #4aa82c;
   background-image: url(../images/grain_bg.jpg);
   position: relative;
@@ -1151,11 +1160,71 @@ footer{
   .title{
     font-size: 18px;
     color: #419a20;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: center;
+    padding: 0 22px;
+    a{
+      color: #419a20;
+    }
   }
   .btn-yes{
     margin-right: 40px;
+  }
+}
+div[class*=pop-video-box]{
+  border: 5px solid #4ea736;
+  width: 604px;
+  height: 483px;
+  display: none;
+  background-image: url(../images/grain_bg.jpg);
+  .pop-close{
+    top: -20px;
+    right: -20px;
+  }
+  .content{
+    padding: 32px;
+    position: relative;
+    .video{
+      width: 540px;
+      height: 374px;
+    }
+  }
+  .share{
+    position: absolute;
+    left: 516px;
+    top: 425px;
+    .share-bar{
+      background-position: 0 -167px;
+      height: 54px;
+      width: 236px;
+      top: -13px;
+      left: -236px;
+      .icon-tsina{
+        margin-left: 18px;
+      }
+    }
+  }
+}
+
+.pop-video-box02{
+  .btn-skip{
+    position: absolute;
+    left: 516px;
+    top: 425px;
+  }
+  .step1{
+    .share{
+      left: 450px;
+    }
+  }
+  .step2{
+    display: none;
+    text-align: center;
+    .message{
+      color: #4ba82e;
+      font-size: 18px;
+      text-align: center;
+      margin: 40px 0;
+    }
   }
 }

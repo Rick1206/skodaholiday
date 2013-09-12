@@ -201,10 +201,6 @@
                 bgfix();
             });
             $('.delete',$suggestions).click(function(){
-//                if(confirm('确认删除吗?')){
-//                    $(this).parent('li').remove();
-//                    bgfix();
-//                }
                 var $this = $(this);
                 $.confirm('确认删除吗?',function(result){
                     if(result){
@@ -242,6 +238,8 @@
             })
             $('body').append(popbox);
             popbox.bPopup({
+                modalClose: false,
+                fadeSpeed: 'fast',
                 onClose:function(){
                     popbox.remove();
                     callback.call(this,confirm);
@@ -292,6 +290,53 @@
                     $(this).removeAttr('tabindex');
                 });
             $('.form-horizontal',$form).validator();
+
+            $('.student',$form).change(function(){
+                var $this = $(this);
+                if($this.is(':checked')){
+                    $.confirm('在此确认,本人若最终获奖,将选择获得"学子特别奖",同时放弃“2013年度聪明达人”奖。具体内容,<a href="http://www.congmingzhuyi.com/how-to-play" target="_blank">查看这里</a>。',function(result){
+                        if(!result){
+                            $this.attr('checked',false);
+                        }
+                    })
+                }
+            });
+
         })();
 
+
+//        video popup
+        $('.pop-video-box01').length>0&&(function(){
+            $('.btn-3d-becomeTalent3').click(function(){
+                $('.pop-video-box01').bPopup();
+                return false;
+            });
+        })();
+
+        $('.pop-video-box02').length>0&&(function(){
+            $('.video-3d-men>a').click(popVideo2);
+
+            var $popbox = $('.pop-video-box02');
+            var domCache ;
+
+            $popbox.find('.skip1').click(function(){
+                $(this).parent('.step1').hide().siblings('.step2').show().end().remove();
+            });
+
+
+
+            function popVideo2(){
+                $popbox.bPopup({
+                    modalClose: false,
+                    onOpen:function(){
+                        domCache = $popbox.clone(true);
+                    },
+                    onClose:function(){
+                        $popbox.replaceWith(domCache);
+                        $popbox = $('.pop-video-box02');
+                    }
+                });
+                return false;
+            }
+        })();
 })(window.jQuery);
