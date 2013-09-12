@@ -1847,7 +1847,8 @@ footer .logo2 a {
   text-align: center;
   padding-top: 10px;
 }
-.confirm {
+.confirm,
+.alert {
   width: 342px;
   padding-top: 40px;
   padding-bottom: 30px;
@@ -1856,17 +1857,20 @@ footer .logo2 a {
   position: relative;
   text-align: center;
 }
-.confirm .title {
+.confirm .title,
+.alert .title {
   font-size: 18px;
   color: #419a20;
   margin-bottom: 20px;
   text-align: center;
   padding: 0 22px;
 }
-.confirm .title a {
+.confirm .title a,
+.alert .title a {
   color: #419a20;
 }
-.confirm .btn-yes {
+.confirm .btn-yes,
+.alert .btn-yes {
   margin-right: 40px;
 }
 div[class*=pop-video-box] {
@@ -3196,4 +3200,13 @@ legend + .control-group {
 }
 .btn-skip:hover {
   background-position: -159px -656px;
+}
+.btn-affirm {
+  width: 56px;
+  height: 27px;
+  background-position: -94px -707px;
+  display: inline-block;
+}
+.btn-affirm:hover {
+  background-position: -158px -707px;
 }

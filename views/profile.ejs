@@ -201,11 +201,15 @@
               <div class="controls">
                 <select class="inline span3">
                   <option>年</option>
-                  <option>1992年</option>
+                  <%for(var i=0;i<81;i++){%>
+                  <option><%=i+1933%>年</option>
+                  <%}%>
                 </select>
                 <select class="inline span3">
                   <option>月</option>
-                  <option>11月</option>
+                  <%for(var i=0;i<12;i++){%>
+                  <option><%if((i+1)<10){%>0<%=i+1%><%}else{%><%=i+1%><%}%>月</option>
+                  <%}%>
                 </select>
               </div>
             </div>
@@ -219,9 +223,11 @@
             <div class="control-group">
               <label class="span5 text_middle">你计划在多长时间内购车？</label>
               <div class="span7">
-                <select class="span4">
+                <select class="span5">
                   <option>1~3个月</option>
                   <option>4~6个月</option>
+                  <option>7~12个月</option>
+                  <option>一年以后</option>
                 </select>
               </div>
             </div>

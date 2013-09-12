@@ -246,6 +246,25 @@
                     callback.call(this,confirm);
                 }
             });
+        };
+        $.alert = function(title){
+            var title = title || '';
+            var callback = callback ;
+            var confirm =  false;
+            var popbox = $('<div class="alert"><p class="title">'+title+'</p><a href="#" class="btn-affirm"></a></div>');
+            popbox.find('.btn-affirm').click(function(){
+                popbox.bPopup().close();
+                return false;
+            });
+            $('body').append(popbox);
+            popbox.bPopup({
+                modalClose: false,
+                fadeSpeed: 'fast',
+                positionStyle: 'fixed',
+                onClose:function(){
+                    popbox.remove();
+                }
+            });
         }
         //  upload
 
@@ -298,11 +317,7 @@
             $('.student',$form).change(function(){
                 var $this = $(this);
                 if($this.is(':checked')){
-                    $.confirm('在此确认,本人若最终获奖,将选择获得"学子特别奖",同时放弃“2013年度聪明达人”奖。具体内容,<a href="http://www.congmingzhuyi.com/how-to-play" target="_blank">查看这里</a>。',function(result){
-                        if(!result){
-                            $this.attr('checked',false);
-                        }
-                    })
+                    $.alert('在此确认,本人若最终获奖,将选择获得"学子特别奖",同时放弃“2013年度聪明达人”奖。具体内容,<a href="http://www.congmingzhuyi.com/how-to-play" target="_blank">查看这里</a>。');
                 }
             });
 
