@@ -240,6 +240,7 @@
             popbox.bPopup({
                 modalClose: false,
                 fadeSpeed: 'fast',
+                positionStyle: 'fixed',
                 onClose:function(){
                     popbox.remove();
                     callback.call(this,confirm);
@@ -275,14 +276,19 @@
         $('.pop-profile-form').length>0&&(function(){
             var $form = $('.pop-profile-form');
             $('.jsPopProfileForm').click(function(){
-                $('.pop-profile-form').bPopup({
+                $form.bPopup({
                     follow: [true,false],
                     position:['auto',0],
+                    modalClose: false,
                     onClose:function(){
                         $form.find('input[type=reset]').click();
                         $form.find('.error').removeClass('error');
                     }
                 });
+            })
+
+            $(window).resize(function(){
+                $form.css('left',($(this).width()-775) *.5);
             })
             $('.cars',$form).jScrollPane({autoReinitialise: true}).find('li').click(function(){
                 $(this).toggleClass('selected');
