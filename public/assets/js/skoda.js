@@ -312,7 +312,7 @@
             }).end().on('mousedown',function(){
                     $(this).removeAttr('tabindex');
                 });
-            $('.form-horizontal',$form).validator();
+
 
             $('.student',$form).change(function(){
                 var $this = $(this);
@@ -321,6 +321,27 @@
                 }
             });
 
+            //validate
+
+            validate('#inputMobile','mobile');
+            validate('#inputEmail','email');
+
+            function validate(ele,r){
+                var reg = {
+                    mobile : /^0*(13|15)\d{9}$/,
+                    email :/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+                };
+                $(ele).focusout(function(){
+                    var _val = $(this).val();
+                    var regx = reg[r] ;
+                    if(_val=='') return false;
+                    if(!regx.test(_val)){
+                        $(this).parents('.control-group').addClass('error');
+                    }else{
+                        $(this).parents('.control-group').removeClass('error');
+                    }
+                });
+            }
         })();
 
 
