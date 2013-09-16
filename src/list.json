@@ -1,0 +1,44 @@
+{
+
+    "locals" : {
+        "project_name":"skoda-ctp",
+        "logined":0,
+        "share":0
+    },
+
+    "pageList":{
+        "index" : {},
+        "head&foot" : {},
+        "idea" : {
+            "data":{"_page":0,"logined":1}
+        },
+        "idea1" : {
+            "template":"idea",
+            "data":{"_page":1,"logined":1}
+            },
+        "idea2" : {
+            "template":"idea",
+            "data":{"_page":2,"logined":1}
+            },
+        "idea3" : {
+            "template":"idea",
+            "data":{"_page":3,"logined":1}
+            },
+        "idea_logout" : {
+            "template":"idea",
+            "data":{"_page":0}
+            },
+        "profile" : {
+            "data":{"logined":1,"user":1,"_page":0}
+            },
+        "profile1" : {
+            "template":"profile",
+             "data":{"logined":1,"user":1,"_page":1}
+            },
+        "profile2" : {
+            "template":"profile",
+             "data":{"logined":1,"user":1,"_page":2}
+            },
+        "draw" : {}        
+    }
+}

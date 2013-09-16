@@ -196,11 +196,23 @@
         $('.suggestions').length>0&&(function(){
             var $suggestions =  $('.suggestions');
             var $suggestions_list = $suggestions.find('.suggestions-list');
+            var element_example = $suggestions_list.find('li');
             $('.btn-more2',$suggestions).click(function(){
-                $suggestions_list.find('li').clone(true).appendTo($suggestions_list);
+                element_example.clone(true).appendTo($suggestions_list);
                 bgfix();
             });
-            $('.delete',$suggestions).click(function(){
+            $(window).scroll(function(){
+                if( $(this).scrollTop() == $(document).height()-$(this).height()){
+
+                    if($suggestions_list.find('li').length<15){
+                        $('.btn-more2',$suggestions).click();
+                    };
+                    if($suggestions_list.find('li').length==15){
+                        $(window).off('scroll');
+                    }
+                }
+            });
+            $(document).on('click','.suggestions .delete',function(){
                 var $this = $(this);
                 $.confirm('确认删除吗?',function(result){
                     if(result){
@@ -210,6 +222,7 @@
                 });
                 return false;
             });
+            bgfix();
             function bgfix(){
                 var $page = $('#page');
                 var fixMask = $('.body-background-profile-fixed');
@@ -219,6 +232,19 @@
                     })
                 }
             }
+
+            var suggestionsInput = $('#suggestions-input');
+            $('#suggestions-submit').click(function(){
+                if(suggestionsInput.val() =="") return false;
+                var ele = element_example.eq(0).clone(true);
+                ele.find('.type-middle').html(suggestionsInput.val());
+                ele.find('.time').html('刚刚');
+                $suggestions_list.prepend(ele);
+                suggestionsInput.val("");
+                return false;
+            });
+
+
         })();
 
         $.confirm = function(title,callback){

@@ -11,11 +11,11 @@ var app = express();
 var expressLayouts = require('express3-ejs-layout');
 var welcome = require('./welcome');
 var htmlStatic = require('./modules/writeHtml');
-
+var conf = require('./modules/conf');
 
 
 app.set('port', process.env.PORT || 3000);
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/src/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').__express);
 
@@ -29,46 +29,38 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
 
-app.use(require('less-middleware')({ src: __dirname + '/public' }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(require('less-middleware')({
+    src: path.join(__dirname, 'src'),
+    dest: path.join(__dirname, 'page'),
+    compress: true
+}));
+
+app.use(express.static(path.join(__dirname, 'page')));
+
 
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
-    app.locals.pretty = true;
 }
 
-app.conf = JSON.parse(fs.readFileSync('package.json','utf-8'));
 
-htmlStatic.configure({app:app,paths:'public'});
+htmlStatic.configure({app:app,paths:'page'});
 
-//welcome
+
+
+//welcome page
 app.use('/welcome',express.static(path.join(__dirname, 'welcome','public')));
-
 app.get('/',welcome.index);
 app.post('/',welcome.refresh);
+app.post('/delete',welcome.delete);
+app.post('/zip',welcome.zip);
+//html config
+
+app.locals(conf.locals);
 
 //html
-app.locals({
-    logined:0,
-    share:0
-});
-htmlStatic.set('index');
-htmlStatic.set('head&foot');
 
-
-htmlStatic.set('idea',{_page:0,logined:'1'});
-htmlStatic.set('idea1','idea',{_page:1,logined:'1'});
-htmlStatic.set('idea2','idea',{_page:2,logined:'1'});
-htmlStatic.set('idea3','idea',{_page:3,logined:'1'});
-htmlStatic.set('idea_logout','idea',{_page:0});
-
-htmlStatic.set('profile',{logined:1,user:1,_page:0});
-htmlStatic.set('profile1','profile',{logined:1,user:1,_page:1});
-htmlStatic.set('profile2','profile',{logined:1,user:1,_page:2});
-
-
-htmlStatic.set('draw');
+htmlStatic.setList(conf.pageList);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

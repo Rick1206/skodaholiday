@@ -1,5 +1,0 @@
-
-
-#Skoda - smart talent
-
-##
