@@ -8,6 +8,7 @@ audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
 audio:not([controls]){display:none}
 html{font-size:100%;-webkit-text-size-adjust:none;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 body{font-family:'黑体';font-size:12px;line-height:1.5;background:#fff;color:#646464}body.body-color{background:#262626}
+body,html{height:100%}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}
 a:focus{outline:thin dotted #333;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
 a:hover,a:active{outline:0}
@@ -155,6 +156,7 @@ footer .logo2{width:142px;height:43px;background:url(../images/logo2.png) no-rep
 .body-background-idea-repeat{background:#ececec url(../images/body-background-idea-repeat.jpg) repeat-y center top;min-width:980px}
 .body-background-profile{background:#ececec url(../images/body-background-profile.jpg) no-repeat center top;min-width:980px}
 .body-background-profile-fixed{background:#ececec url(../images/body-background-profile-fixed.jpg) repeat-y center;position:absolute;width:100%;top:1384px;z-index:1;height:0 }
+.body-background-404{background:#ececec url(../images/skoda_error.jpg) no-repeat center top;min-width:980px;height:100%}
 .call-board{position:absolute;top:49px;right:62px;width:236px;height:236px}.call-board img{width:100%}
 .expert{position:absolute;top:83px;left:85px}
 .expert-mask{position:absolute;width:398px;height:255px;background:url(../images/expert-mask.png) no-repeat;z-index:8;top:-5px;left:-6px}.expert-mask a{width:130px;height:121px;float:left;display:block}

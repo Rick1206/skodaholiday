@@ -39,6 +39,10 @@
             "template":"profile",
              "data":{"logined":1,"user":1,"_page":2}
             },
-        "draw" : {}        
+        "draw" : {},
+        "404" :{
+            "data":{"layout":false}
+        },
+        "news":{}
     }
 }
