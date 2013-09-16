@@ -36,7 +36,7 @@ app.use(require('less-middleware')({
 }));
 
 app.use(express.static(path.join(__dirname, 'page')));
-
+app.use('/zip',express.static(path.join(__dirname, 'zip')));
 
 // development only
 if ('development' == app.get('env')) {
@@ -53,7 +53,7 @@ app.use('/welcome',express.static(path.join(__dirname, 'welcome','public')));
 app.get('/',welcome.index);
 app.post('/',welcome.refresh);
 app.post('/delete',welcome.delete);
-app.post('/zip',welcome.zip);
+app.post('/packed',welcome.packed);
 //html config
 
 app.locals(conf.locals);

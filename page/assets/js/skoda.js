@@ -240,7 +240,7 @@
                 ele.find('.type-middle').html(suggestionsInput.val());
                 ele.find('.time').html('刚刚');
                 $suggestions_list.prepend(ele);
-                suggestionsInput.val("");
+                suggestionsInput.val(""),bgfix();
                 return false;
             });
 
