@@ -212,6 +212,14 @@
                     }
                 }
             });
+            $(document).on('click','.suggestions .against',function(){
+                var $this = $(this);
+                if($(this).data('reported')!=1){
+                    $(this).siblings('.pos-text').append('<span style="padding-left: 10px;color: red">已举报</span>');
+                    $(this).data('reported',1).hide();
+                }
+                return false;
+            });
             $(document).on('click','.suggestions .delete',function(){
                 var $this = $(this);
                 $.confirm('确认删除吗?',function(result){

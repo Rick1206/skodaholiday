@@ -246,12 +246,12 @@ footer .logo2{width:142px;height:43px;background:url(../images/logo2.png) no-rep
 .suggestions .suggestions-box .suggestions-box-bd .submit-bar{text-align:right;padding:10px 0 10px 0;*zoom:1}.suggestions .suggestions-box .suggestions-box-bd .submit-bar:before,.suggestions .suggestions-box .suggestions-box-bd .submit-bar:after{display:table;content:"";line-height:0}
 .suggestions .suggestions-box .suggestions-box-bd .submit-bar:after{clear:both}
 .suggestions .suggestions-box .suggestions-box-bd .color{color:#4ba82e}
-.suggestions .suggestions-box .suggestions-box-bd .suggestions-list{list-style:none}.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li{padding:20px 3px;border-bottom:1px solid #b2dbb0;position:relative;font-size:14px}.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:first-child{border-top:1px solid #b2dbb0}
+.suggestions .suggestions-box .suggestions-box-bd .suggestions-list{list-style:none}.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li{padding:20px 3px 25px 3px;border-bottom:1px solid #b2dbb0;position:relative;font-size:14px}.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:first-child{border-top:1px solid #b2dbb0}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list li.official-pd{padding:10px 3px}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .name{width:108px}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .delete,.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .against{background-image:url(../images/sprites.png);width:16px;height:16px;position:absolute;bottom:10px;display:none}
-.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .time{width:150px;height:16px;position:absolute;bottom:7px;right:50px;text-align:right;line-height:1;font-size:12px;color:#999999;display:none}
-.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:hover .delete,.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:hover .against,.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:hover .time{display:block}
+.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .pos-text{width:150px;height:16px;position:absolute;bottom:7px;right:50px;text-align:right;line-height:1;font-size:12px;color:#999999;display:none}
+.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:hover .delete,.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:hover .against,.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:hover .pos-text{display:block}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .delete{right:25px;background-position:-188px -305px}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .against{right:0px;background-position:-166px -305px}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .type-middle{line-height:1.5}
