@@ -247,13 +247,18 @@ footer .logo2{width:142px;height:43px;background:url(../images/logo2.png) no-rep
 .suggestions .suggestions-box .suggestions-box-bd .submit-bar:after{clear:both}
 .suggestions .suggestions-box .suggestions-box-bd .color{color:#4ba82e}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list{list-style:none}.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li{padding:20px 3px;border-bottom:1px solid #b2dbb0;position:relative;font-size:14px}.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:first-child{border-top:1px solid #b2dbb0}
-.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .name{width:100px}
+.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li.official-pd{padding:10px 3px}
+.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .name{width:108px}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .delete,.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .against{background-image:url(../images/sprites.png);width:16px;height:16px;position:absolute;bottom:10px;display:none}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .time{width:150px;height:16px;position:absolute;bottom:7px;right:50px;text-align:right;line-height:1;font-size:12px;color:#999999;display:none}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:hover .delete,.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:hover .against,.suggestions .suggestions-box .suggestions-box-bd .suggestions-list li:hover .time{display:block}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .delete{right:25px;background-position:-188px -305px}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .against{right:0px;background-position:-166px -305px}
 .suggestions .suggestions-box .suggestions-box-bd .suggestions-list li .type-middle{line-height:1.5}
+.suggestions .suggestions-box .official{width:742px;border:1px solid #59af3f;position:relative;margin-left:-65px;background-color:#deecdd;padding:10px 0}.suggestions .suggestions-box .official .official-wrap{width:608px;margin-right:auto;margin-left:auto;*zoom:1}.suggestions .suggestions-box .official .official-wrap:before,.suggestions .suggestions-box .official .official-wrap:after{display:table;content:"";line-height:0}
+.suggestions .suggestions-box .official .official-wrap:after{clear:both}
+.suggestions .suggestions-box .official .shadow{width:11px;height:11px;background-image:url(../images/shadow.png);position:absolute;bottom:-10px}.suggestions .suggestions-box .official .shadow.sleft{background-position:-12px 0;left:0}
+.suggestions .suggestions-box .official .shadow.sright{background-position:0 0;right:0}
 .suggestions .suggestions-box .suggestions-box-ft{width:100%;height:25px;background:url(../images/suggestions_bg.png) no-repeat -1576px -35px}
 .video-3d-men{width:132px;height:233px;background:url(../images/3d_men.png) no-repeat -361px 0;position:absolute;left:35px;top:-40px}.video-3d-men a{width:50px;height:50px;position:absolute;top:25px;left:56px;background:url(../images/sprites.png) no-repeat -6px -397px}
 .pop-close{position:absolute;z-index:99}.pop-close span{width:35px;height:35px;background-image:url(../images/sprites.png);background-position:-18px -464px;cursor:pointer;display:block}

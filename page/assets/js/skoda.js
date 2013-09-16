@@ -236,7 +236,7 @@
             var suggestionsInput = $('#suggestions-input');
             $('#suggestions-submit').click(function(){
                 if(suggestionsInput.val() =="") return false;
-                var ele = element_example.eq(0).clone(true);
+                var ele = element_example.eq(1).clone(true);
                 ele.find('.type-middle').html(suggestionsInput.val());
                 ele.find('.time').html('刚刚');
                 $suggestions_list.prepend(ele);
@@ -360,11 +360,10 @@
                 $(ele).focusout(function(){
                     var _val = $(this).val();
                     var regx = reg[r] ;
-                    if(_val=='') return false;
-                    if(!regx.test(_val)){
-                        $(this).parents('.control-group').addClass('error');
-                    }else{
+                    if(regx.test(_val)||_val==""){
                         $(this).parents('.control-group').removeClass('error');
+                    }else{
+                        $(this).parents('.control-group').addClass('error');
                     }
                 });
             }
