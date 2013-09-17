@@ -1,8 +1,25 @@
-<div class="content">
+<div class="content body-background-news">
   <section id="page">
-    <div class="hd"></div>
-    <div class="bd">
-      123
+    <div class="hd">
+      <div class="news-hd"></div>
+    </div>
+    <div class="bd body-background-news-repeat">
+      <div class="news-bd">
+        <ul class="news-list">
+          <%for(var i=0;i<3;i++){%>
+          <li>
+            <div class="news">
+              <div class="news-text-box">
+                123
+              </div>
+              <div class="news-pic">
+                <img src="assets/images/news_pic.jpg" alt=""/>
+              </div>
+            </div>
+          </li>
+          <%}%>
+        </ul>
+      </div>
     </div>
   </section>
 </div>

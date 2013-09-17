@@ -359,7 +359,19 @@
 
             validate('#inputMobile','mobile');
             validate('#inputEmail','email');
+            var validate_error = false;
 
+            $form.find('.btn-save').click(function(){
+
+                $('form',$form).find('.control-group').each(function(){
+                    if($(this).hasClass('error')){
+                        validate_error =  true;
+                        return false;
+                    }
+                });
+
+                if(validate_error) return false;
+            })
             function validate(ele,r){
                 var reg = {
                     mobile : /^0*(13|15)\d{9}$/,
@@ -375,6 +387,8 @@
                     }
                 });
             }
+
+
         })();
 
 
