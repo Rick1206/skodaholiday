@@ -42,6 +42,9 @@
         "draw" :{},
         "404" :{ },
         "500" :{ },
-        "news":{}
+        "news":{},
+        "news_detail":{
+            "template":"detail"
+        }
     }
 }
