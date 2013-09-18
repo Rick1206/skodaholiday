@@ -85,15 +85,25 @@
                 })
             }
             //vertical center
+
             itemCarousel.find('img').each(function(){
-                $(this).css('visibility','hidden');
-                $(this).load(function(){
-                    $(this).css({
+                var $this = $(this);
+                $this.css({visibility:'hidden'});
+                $this.on('load',function(){
+                    $this.css({
                         top:'50%',
                         marginTop:-$(this).height() *.5,
-                        'visibility':'visible'
+                        visibility:'visible'
                     });
-                })
+                });
+
+                var _pic = new Image();
+                _pic.onload = function(){
+                    $this.trigger('load');
+                    _pic = null;
+                }
+                _pic.src = this.src;
+
             });
         })();
 
