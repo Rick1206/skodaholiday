@@ -45,6 +45,10 @@
         "news":{},
         "news_detail":{
             "template":"detail"
-        }
+        },
+        "faq":{
+
+        },
+        "tnc":{}
     }
 }
