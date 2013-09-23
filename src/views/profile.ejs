@@ -45,7 +45,7 @@
         </div>
         <div class="profile-right">
           <div class="tv">
-            <div class="tv-crash"></div>
+            <div class="tv-crash"><%if(_page==0){%><img width="363" height="330" src="assets/images/pic_04.jpg" alt=""><%}%></div>
             <div class="tv-show">
               <div class="men-3d-0<%=_page+1%>"></div>
               <div class="tv-btns">
@@ -437,9 +437,9 @@
         <a href="javascript:void(0);" class="btn-select-file"></a>
       </div>
     </div>
-    <p class="help-block">图片不得大于2M </p>
+    <p class="help-block">图片不得大于2M <span class="err"><%if(_page==0){%>图片大小超过2M<%}else{%>图片格式不正确 <%}%></span></p>
     <form id="upload" action="src.php">
-      <input type="file" class="hide"/>
+      <input type="file" class="hide" accept="image/gif, image/jpeg,image/png"/>
       <button type="submit" value="" class="btn-submit-upload"></button>
     </form>
   </div>

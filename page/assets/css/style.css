@@ -283,7 +283,8 @@ footer .logo2{width:142px;height:43px;background:url(../images/logo2.png) no-rep
 .pop-profile-form .text_middle{line-height:25px}
 .pop-upload-box{width:345px;height:164px;border:5px solid #4ba82e;background-color:#f3f3f3;display:none}.pop-upload-box .pop-close{top:-22px;right:-22px}
 .pop-upload-box .pop-content{padding:50px 10px 0 20px}.pop-upload-box .pop-content .file-input{width:193px;height:27px;line-height:27px;padding:0 5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background-color:#ebebeb;border:1px solid #c9c5bf}
-.pop-upload-box .pop-content #upload{text-align:center;padding-top:10px}
+.pop-upload-box .pop-content #upload{text-align:center;position:absolute;left:129px;top:122px}
+.pop-upload-box .err{display:block;color:red}
 .confirm,.alert{width:342px;padding-top:40px;padding-bottom:30px;border:5px solid #4aa82c;background-image:url(../images/grain_bg.jpg);position:relative;text-align:center}.confirm .title,.alert .title{font-size:18px;color:#419a20;margin-bottom:20px;text-align:center;padding:0 22px}.confirm .title a,.alert .title a{color:#419a20}
 .confirm .btn-yes,.alert .btn-yes{margin-right:40px}
 div[class*=pop-video-box]{border:5px solid #4ea736;width:604px;height:483px;display:none;background-image:url(../images/grain_bg.jpg)}div[class*=pop-video-box] .pop-close{top:-20px;right:-20px}
