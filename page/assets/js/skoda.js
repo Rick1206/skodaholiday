@@ -406,6 +406,8 @@
         $('.pop-video-box01').length>0&&(function(){
             $('.btn-3d-becomeTalent3').click(function(){
                 $('.pop-video-box01').bPopup();
+                $(this).addClass('disable');
+                $(this).off('click');
                 return false;
             });
         })();
