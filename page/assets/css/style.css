@@ -234,7 +234,7 @@ footer .logo2{width:142px;height:43px;background:url(../images/logo2.png) no-rep
 .user-intro .name{font-size:14px}
 .user-intro .color{color:#68b254}
 .user-intro .btns{padding-top:19px}
-.tv{width:558px;height:510px;position:relative}.tv .tv-crash{width:363px;height:330px;background-image:url(../images/tv.gif);z-index:2;top:9px;left:12px;position:absolute}.tv .tv-crash img{width:100%}
+.tv{width:558px;height:510px;position:relative}.tv .tv-crash{width:363px;height:330px;z-index:2;top:9px;left:12px;position:absolute}.tv .tv-crash img{width:100%}
 .tv .tv-show{width:558px;height:510px;background:url(../images/TV.png) no-repeat;position:relative;z-index:10}.tv .tv-show [class*=men-3d-]{width:105px;height:194px;background-image:url(../images/3d_men.png);position:absolute;top:15px;left:394px }
 .tv .tv-show .btns2{position:absolute;top:388px;left:435px;z-index:2}
 .tv .tv-show .men-3d-01{background-position:-5px 0}
