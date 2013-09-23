@@ -12,7 +12,7 @@
                 </div>
               </div>
               <div class="pt10">
-                <a onclick="_gaq.push(['_trackEvent', 'Click', 'watch-vote-video-pp'])" class="btn-3d-becomeTalent3" href="#"></a>
+                <a onclick="_gaq.push(['_trackEvent', 'Click', 'watch-vote-video-pp'])" class="btn-3d-becomeTalent3 <%if(_page==0){%>disable<%}%>" href="#"></a>
               </div>
             </div>
             <div class="user-intro">
@@ -171,7 +171,7 @@
     <div class="pop-content">
       <div class="row-fluid">
         <div class="span4">
-          <img width="181" height="181" src="assets/images/user_pic_default_01.jpg" alt=""/>
+          <img width="181" height="181"  class="user-pic" src="assets/images/user_pic_default_01.jpg" alt=""/>
           <div class="btns-wrap">
             <a onclick="_gaq.push(['_trackEvent', 'Click', 'upload-profile-pic-pp'])" href="javascript:void(0);" class="btn-update-avatar3 jsPopUploadBox"></a>
           </div>
@@ -425,6 +425,14 @@
     </div>
   </form>
 </div>
+<!--jsPopBox-->
+<div class="pop-box">
+  <a class="b-close pop-close" href="#"><span></span></a>
+  <div class="pop-content">
+    <p class="title">该评论含有敏感字词，请重新编写。</p>
+    <div class="err">上网文凭<br> 替考<br> 赌博机<br> 顺利过<br> 考后付款 <br>香港彩<br> 传送答案</div>
+  </div>
+</div>
 <!--jsPopUploadBox-->
 <div class="pop-upload-box">
   <a class="b-close pop-close" href="#"><span></span></a>
@@ -481,5 +489,4 @@
 <script type="text/javascript">
   _gaq.push(['_trackPageview', '/personal-profile']);
 </script>
-<script type="text/javascript" src="assets/js/lib/jquery.bpopup.js"></script>
 <script type="text/javascript" src="assets/js/lib/jquery.form.min.js"></script>
