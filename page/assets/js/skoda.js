@@ -201,7 +201,16 @@
                 position:['auto',100]
             });
         });
-        $('.notification .jspPane');
+
+        var test_notification_ele = $('.notification .text-wrap').find('ul').clone();
+
+        $('.notification .text-wrap').on('jsp-scroll-y',function(event, scrollPositionY, isAtTop, isAtBottom){
+            if(isAtBottom){
+                $(this).find('.jspPane').append(test_notification_ele);
+            }
+        });
+
+
         //get more data'  for example
         $('.suggestions').length>0&&(function(){
             var $suggestions =  $('.suggestions');
