@@ -300,7 +300,7 @@ div[class*=pop-video-box] .share{position:absolute;left:516px;top:425px}div[clas
 .pop-video-box02 .step1 .share{left:450px}
 .pop-video-box02 .step2{display:none;text-align:center}.pop-video-box02 .step2 .message{color:#4ba82e;font-size:18px;text-align:center;margin:90px 0 70px 0}
 .activate{position:absolute;top:154px;left:310px;width:392px;height:127px}.activate h1{font-weight:bold;color:#4ba82e;font-size:24px;margin:0px 20px 0 10px}
-.activate p{margin-top:10px}
+.activate p{margin-top:10px;font-size:14px}
 .activate a{color:#85be75;text-decoration:none}
 .news-hd{width:100%;height:137px}.news-hd.detail{height:331px;width:980px;margin-right:auto;margin-left:auto;*zoom:1;position:relative}.news-hd.detail:before,.news-hd.detail:after{display:table;content:"";line-height:0}
 .news-hd.detail:after{clear:both}
