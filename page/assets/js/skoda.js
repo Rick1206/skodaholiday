@@ -128,17 +128,19 @@
         //share bar
         $('.btn-share').length>=1&&
         (function(){
+            $('.btn-share').each(function(){
+                if(!$(this).hasClass('disable')){
+                    $(this).on('mouseenter',function(){
+                        $(this).siblings('.share-bar').show(),
+                            $(this).addClass('selected');
+                    }).parent('.share').on('mouseleave',function(){
+                            $(this).find('.share-bar').hide(),
+                                $(this).find('.btn-share').removeClass('selected');
+                        });
+                };
+            })
 
-            if($('.btn-share').hasClass('disable')){
-                return ;
-            }
-            $('.btn-share').on('mouseenter',function(){
-                $(this).siblings('.share-bar').show(),
-                $(this).addClass('selected');
-            }).parent('.share').on('mouseleave',function(){
-                    $(this).find('.share-bar').hide(),
-                    $(this).find('.btn-share').removeClass('selected');
-                });
+
 
         })();
         //maessage popup
