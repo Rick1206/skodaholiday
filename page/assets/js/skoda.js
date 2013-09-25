@@ -201,7 +201,7 @@
                 position:['auto',100]
             });
         });
-
+        $('.notification .jspPane');
         //get more data'  for example
         $('.suggestions').length>0&&(function(){
             var $suggestions =  $('.suggestions');
@@ -440,4 +440,6 @@
         })();
 
     $('.pop-box').bPopup();
+
+
 })(window.jQuery);

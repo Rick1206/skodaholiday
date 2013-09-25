@@ -70,7 +70,7 @@
     <p class="title2">重新获取验证码</p>
     <p class="help-block">如果你尚未收到验证码，请重新获取。</p>
     <form class="form-inline">
-      <input type="text" placeholder="输入邮箱地址"/> <button class="btn-send"></button>
+      <input type="text" placeholder="输入邮箱地址" id="checkEmail"/> <button class="btn-send"></button>
     </form>
   </div>
 </div>
@@ -104,9 +104,28 @@
   </div>
 </footer>
 <script type="text/javascript">
-  $('.resend').click(function(){
-    $('.pop-box').bPopup();
-  });
+  (function($){
+
+    $('.resend').click(function(){
+      $('.pop-box').bPopup();
+    });
+
+    $('#checkEmail').focusout(function(){
+      if($(this).val()==""){
+        $(this).removeClass('error');
+        return false;
+      }
+      if(!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test($(this).val())){
+        $(this).addClass('error');
+      }else{
+        $(this).removeClass('error');
+      }
+    }).siblings('.btn-send').click(function(){
+      if($('#checkEmail').val()==""||$('#checkEmail').hasClass('error')){
+        return false;
+      };
+    });
+  })(jQuery)
 </script>
 <script type="text/javascript" src="assets/js/lib/dropdown.min.js"></script>
 <script type="text/javascript" src="assets/js/lib/jquery.mousewheel.min.js"></script>
