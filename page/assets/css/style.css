@@ -206,15 +206,13 @@ footer .logo2{width:142px;height:43px;background:url(../images/logo2.png) no-rep
 .ideas .ideas-bd .bd-item2{background-position:-418px -482px}
 .ideas .ideas-bd .bd-item3{background-position:-209px -482px}
 .ideas .ideas-bd .dropdown{position:absolute;top:-10px;left:725px}
+.dropdown a{text-decoration:none}
 .dropdown.open ul.dropdown-menu{display:block;list-style:none;position:absolute;top:25px;left:0}.dropdown.open ul.dropdown-menu li{min-height:26px}
-.dropdown.open .dropdown-toggle-text1{background-position:-124px -186px}
+.dropdown.open .dropdown-toggle-text1{background-position:-124px -186px;color:#ffffff}
 .dropdown ul.dropdown-menu{display:none}
-[class^=dropdown-toggle-text]{background-image:url(../images/sprites_02.png);height:26px;cursor:pointer;display:block}
+[class^=dropdown-toggle-text]{background-image:url(../images/sprites_02.png);height:26px;cursor:pointer;display:block;color:#4ba82e;font-size:16px;font-weight:bold;line-height:26px;text-indent:5px}[class^=dropdown-toggle-text]:hover{color:#ffffff}
 .dropdown-toggle-text1{width:102px;background-position:-5px -186px}.dropdown-toggle-text1:hover{background-position:-124px -186px}
 .dropdown-toggle-text2{width:79px;background-position:-5px -212px}.dropdown-toggle-text2:hover{background-position:-124px -212px}
-.dropdown-toggle-text3{width:79px;background-position:-5px -238px}.dropdown-toggle-text3:hover{background-position:-124px -238px}
-.dropdown-toggle-text4{width:79px;background-position:-5px -264px}.dropdown-toggle-text4:hover{background-position:-124px -264px}
-.dropdown-toggle-text5{width:79px;background-position:-5px -299px}.dropdown-toggle-text5:hover{background-position:-124px -299px}
 #gotop{width:85px;height:212px;background:url(../images/back_top.png);position:fixed;margin-left:887px;top:1000px;cursor:pointer}#gotop:hover{background-position:0 -212px}
 .getmore-idea{width:100%;text-align:center;padding-bottom:29px}
 .item-cup{background-image:url(../images/cup.png);width:100px;height:82px;top:-76px;left:25px;z-index:9;position:absolute}

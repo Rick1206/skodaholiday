@@ -50,6 +50,7 @@
 
         },
         "tnc":{},
-        "activate":{}
+        "activate":{},
+        "howToPlay":{}
     }
 }
