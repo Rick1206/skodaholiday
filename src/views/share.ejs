@@ -1,4 +1,4 @@
-<a class="btn-share" href="javascript:void(0);"><span class="font-share"></span></a>
+<a class="btn-share <%if(share_disable==1){%>disable<%}%>" href="javascript:void(0);"><span class="font-share"></span></a>
 <div class="share-bar">
   <a href="#" target="_blank" <%if(share!=0){%>onclick="_gaq.push(['_trackEvent', 'Click', '<%=share%>'])"<%}%> ><span class="icon-tsina"></span></a>
   <a href="#" target="_blank" <%if(share!=0){%>onclick="_gaq.push(['_trackEvent', 'Click', '<%=share%>'])"<%}%> ><span class="icon-kaixin001"></span></a>

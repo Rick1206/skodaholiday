@@ -129,6 +129,9 @@
         $('.btn-share').length>=1&&
         (function(){
 
+            if($('.btn-share').hasClass('disable')){
+                return ;
+            }
             $('.btn-share').on('mouseenter',function(){
                 $(this).siblings('.share-bar').show(),
                 $(this).addClass('selected');

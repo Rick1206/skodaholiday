@@ -45,11 +45,14 @@
         </div>
         <div class="profile-right">
           <div class="tv">
-            <div class="tv-crash"><%if(_page==0){%><img width="363" height="330" src="assets/images/pic_04.jpg" alt=""><%}else{%><img width="363" height="330" src="assets/images/tv.gif" alt=""><%}%></div>
+            <div class="tv-crash">
+              <%if(_page==0){%><img width="363" height="330" src="assets/images/tv.gif" alt="">
+              <%}else{%><img width="363" height="330" src="assets/images/pic_04.jpg" alt=""><%}%>
+            </div>
             <div class="tv-show">
-              <div class="men-3d-0<%=_page+1%>"></div>
+              <div <%if(_page>0){%>class="men-3d-0<%=_page+1%>" <%}%> ></div>
               <div class="tv-btns">
-                <a class="btn-next-topic" onclick="_gaq.push(['_trackEvent', 'Click', 'next-idea-pp'])" href="#"></a>
+                <a class="btn-next-topic <%if(_page==0){%>disable<%}%>" onclick="_gaq.push(['_trackEvent', 'Click', 'next-idea-pp'])" href="#"></a>
                 <div class="share">
                   <%share='share-idea-pp'%>
                   <%include share%>

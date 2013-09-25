@@ -20,7 +20,7 @@
     <p class="title2">重新获取验证码</p>
     <p class="help-block">如果你尚未收到验证码，请重新获取。</p>
     <form class="form-inline">
-      <input type="text" placeholder="输入邮箱地址" id="checkEmail"/> <button class="btn-send"></button>
+      <input type="text" value="输入邮箱地址" id="checkEmail"/> <button class="btn-send"></button>
     </form>
   </div>
 </div>
@@ -36,15 +36,19 @@
         $(this).removeClass('error');
         return false;
       }
+
       if(!/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test($(this).val())){
         $(this).addClass('error');
+
       }else{
         $(this).removeClass('error');
       }
+    }).focus(function(){
+          $(this).val('');
     }).siblings('.btn-send').click(function(){
       if($('#checkEmail').val()==""||$('#checkEmail').hasClass('error')){
         return false;
       };
-    });
+    })
   })(jQuery)
 </script>

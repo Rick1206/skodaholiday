@@ -3,7 +3,8 @@
     "locals" : {
         "project_name":"skoda-ctp",
         "logined":0,
-        "share":0
+        "share":0,
+        "share_disable":0
     },
 
     "pageList":{
@@ -29,7 +30,7 @@
             "data":{"_page":0}
             },
         "profile" : {
-            "data":{"logined":1,"user":1,"_page":0}
+            "data":{"logined":1,"user":1,"_page":0,"share_disable":1}
             },
         "profile1" : {
             "template":"profile",
