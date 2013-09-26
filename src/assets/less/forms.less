@@ -382,10 +382,15 @@ select:focus:required:invalid,input.error {
 }
 
 input.error{
-  color: #b94a48;
+  color: @errorText;
   border-color: #ee5f5b;
 }
-
+.help-inline.error{
+  color: @errorText;
+}
+.help-inline.success{
+  color: @successText;
+}
 // FORM ACTIONS
 // ------------
 

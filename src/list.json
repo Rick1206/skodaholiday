@@ -4,7 +4,8 @@
         "project_name":"skoda-ctp",
         "logined":0,
         "share":0,
-        "share_disable":0
+        "error":"",
+        "success":""
     },
 
     "pageList":{
@@ -40,6 +41,14 @@
             "template":"profile",
              "data":{"logined":1,"user":1,"_page":2}
             },
+        "profile_error" : {
+            "template":"profile",
+            "data":{"logined":1,"user":1,"_page":2,"error":"上传失败，请重新上传一遍！"}
+        },
+        "profile_success" : {
+            "template":"profile",
+            "data":{"logined":1,"user":1,"_page":2,"success":"上传成功！"}
+        },
         "draw" :{},
         "404" :{ },
         "500" :{ },
@@ -52,6 +61,7 @@
         },
         "tnc":{},
         "activate":{},
+        "password_reset":{},
         "howToPlay":{}
     }
 }
