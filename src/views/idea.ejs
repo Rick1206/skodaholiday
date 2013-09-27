@@ -16,7 +16,7 @@
           <a onclick="_gaq.push(['_trackEvent', 'Click', 'category-digital-ig'])" class="ideas-item hd-item4 <%if(_page==3){%>selected<%}%>" href="./idea3.html"></a>
         </div>
         <div class="ideas-bd">
-          <div class="dropdown idea-switchover">
+          <div class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="dropdown-toggle-text1" data-ref='1'>最近上传</span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="#"><span class="dropdown-toggle-text2" data-ref='2'>最早上传</span></a></li>
@@ -83,13 +83,5 @@
 </div>
 <script type="text/javascript">
   $('.pop-box').bPopup();
-  (function(){
-    var $dropdownMenu =  $('.idea-switchover .dropdown-menu');
-    var $dropdownMenutoggle = $dropdownMenu.siblings('.dropdown-toggle');
-
-    $dropdownMenu.click(function(e){
-      $dropdownMenutoggle.find('span').html($(e.target).html());
-    });
-  })();
   _gaq.push(['_trackPageview', '/idea-gallery']);
 </script>
