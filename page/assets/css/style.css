@@ -303,7 +303,10 @@ div[class*=pop-video-box] .share{position:absolute;left:516px;top:425px}div[clas
 .pass_reset{position:absolute;top:123px;left:299px;width:392px;height:127px;text-align:center}.pass_reset h1{font-weight:bold;color:#4ba82e;font-size:36px;margin:0px 20px 0 10px}
 .pass_reset p{margin-top:10px;font-size:14px;margin-bottom:10px}
 .pass_reset a{color:#4ba82e;text-decoration:none;font-size:16px}
-.how-to-play [class*=image-block-]{width:100%;min-width:980px}
+.how-to-play .image-block-1{height:594px;background:url(../images/how_to_play_01.jpg) no-repeat center}
+.how-to-play .image-block-2{height:1671px;background:url(../images/how_to_play_02.jpg) no-repeat center}
+.how-to-play .image-block-3{height:1034px;background:url(../images/how_to_play_03.jpg) no-repeat center}
+.how-to-play [class*=image-block-]{width:100%;min-width:980px}.how-to-play [class*=image-block-] .wrap{height:100%}.how-to-play [class*=image-block-] .wrap .img-map{width:100%;height:100%;display:block}
 .news-hd{width:100%;height:137px}.news-hd.detail{height:331px;width:980px;margin-right:auto;margin-left:auto;*zoom:1;position:relative}.news-hd.detail:before,.news-hd.detail:after{display:table;content:"";line-height:0}
 .news-hd.detail:after{clear:both}
 .news-hd.detail .title{font-size:36px;color:#4ba82e;width:600px;position:absolute;top:115px;left:195px}

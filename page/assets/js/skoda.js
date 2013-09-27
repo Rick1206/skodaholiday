@@ -349,22 +349,45 @@
 
         })();
         $('.pop-profile-form').length>0&&(function(){
-            var $form = $('.pop-profile-form');
-            $('.jsPopProfileForm').click(function(){
-                $form.bPopup({
-                    follow: [true,false],
-                    position:['auto',0],
-                    modalClose: false,
-                    onClose:function(){
-                        $form.find('input[type=reset]').click();
-                        $form.find('.error').removeClass('error');
-                    }
-                });
-            })
 
-            $(window).resize(function(){
-                $form.css('left',($(this).width()-775) *.5);
-            })
+            var $form = $('.pop-profile-form');
+            var br_ver = navigator.appVersion.toLowerCase();
+            $('.jsPopProfileForm').click(function(){
+                location.hash = 'bpop-profile-form';
+                if(br_ver.indexOf('msie 7')||br_ver.indexOf('msie 6')){
+                    $(window).trigger('hashchange');
+                }
+            });
+
+            $(window)
+                .resize(function(){
+                    $form.css('left',($(this).width()-775) *.5);
+                })
+                .on('hashchange',function(){
+                    if(location.hash == '#bpop-profile-form'){
+                        $form.bPopup({
+                            follow: [true,false],
+                            position:['auto',0],
+                            modalClose: false,
+                            onClose:function(){
+                                removeHash();
+                                $form.find('input[type=reset]').click();
+                                $form.find('.error').removeClass('error');
+                            }
+                        });
+                    }
+                })
+                .trigger('hashchange');
+
+            function removeHash () {
+                var loc = window.location;
+                if ("pushState" in history)
+                    history.pushState("", document.title, loc.pathname + loc.search);
+                else {
+                    loc.hash = "";
+                }
+            }
+
             $('.cars',$form).jScrollPane({autoReinitialise: true}).find('li').click(function(){
                 $(this).toggleClass('selected');
             }).end().on('mousedown',function(){
@@ -453,7 +476,7 @@
             }
         })();
 
-    $('.pop-box').bPopup();
+//    $('.pop-box').bPopup();
 
 
 })(window.jQuery);
