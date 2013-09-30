@@ -447,7 +447,7 @@
                         setTimeout(
                             function(_this){
                                 var video = $(_this).find('.video');
-                                video.html(swf(video.data('vid'),540,374));
+                                video.html(swf(video.data('vid'),540,374,video.data("fid")));
                             },300,this
                         )
                     }
@@ -476,7 +476,7 @@
                         setTimeout(
                             function(_this){
                                 var video = $(_this).find('.video');
-                                video.html(swf(video.data('vid'),540,374));
+                                video.html(swf(video.data('vid'),540,374,video.data("fid")));
 
                             },300,this
                         )
