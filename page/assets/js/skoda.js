@@ -197,7 +197,7 @@
         })();
 
         $('.text-wrap').length >=1 && (function(){
-            $('.text-wrap').jScrollPane({autoReinitialise: true,contentWidth: '0px'});
+            $('.text-wrap').jScrollPane({showArrows: true,autoReinitialise: true,contentWidth: '0px'});
         })();
 
         $('.jsPopIdeaDetail').click(function(){
@@ -267,7 +267,17 @@
 
             var suggestionsInput = $('#suggestions-input');
             $('#suggestions-submit').click(function(){
-                if(suggestionsInput.val() =="") return false;
+            	var textLen = parseInt(suggestionsInput.val().length);
+            	var limitWords = parseInt(suggestionsInput.attr("maxlength"));
+            	var errorMsg = $(".suggestions-error");
+                if(textLen == 0) return false;
+                if(textLen > limitWords){
+                	var overNum = textLen - limitWords;
+                	errorMsg.html("已超出"+overNum+"字");
+                	return false;
+                }else{
+                	errorMsg.html("");
+                }
                 var ele = element_example.eq(1).clone(true);
                 ele.find('.type-middle').html(suggestionsInput.val());
                 ele.find('.time').html('刚刚');
@@ -276,7 +286,7 @@
                 return false;
             });
 
-
+			
         })();
 
         $.confirm = function(title,callback){
@@ -398,7 +408,7 @@
             $('.student',$form).change(function(){
                 var $this = $(this);
                 if($this.is(':checked')){
-                    $.alert('在此确认,本人若最终获奖,将选择获得"学子特别奖",同时放弃“2013年度聪明达人”奖。具体内容,<a href="http://www.congmingzhuyi.com/how-to-play" target="_blank">查看这里</a>。');
+                    $.alert('在此确认,本人若最终获奖,将选择获得"学子特别奖",同时放弃“2013年度聪明达人”奖。具体内容,<a href="./tnc.html#student" target="_blank">查看这里</a>。');
                 }
             });
 
@@ -499,5 +509,25 @@
             return '<embed src="'+d+'" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" id="'+eid+'" name="'+eid+'" bgcolor="#000000" width="'+a+'" height="'+b+'" allowscriptaccess="always" quality="High" wmode="transparent" allowFullScreen="true"></object>';
         }
     };
-
+    
+   
+	$(".message-box").length>0&&(function() {
+		$(".btn-submit").click(function() {
+			var textArea = $(this).parent().children("textarea");
+			var textAreaLen = parseInt(textArea.val().length);
+			var errorMsg = $(this).parent().children(".message-error");
+			var limitWords = parseInt(textArea.attr("maxlength"));
+			
+			if(textAreaLen>limitWords){
+				var overNum = textAreaLen - limitWords;
+				errorMsg.html("已超出"+overNum+"字");
+				return;
+			}else{
+				errorMsg.html("");
+			}
+			//-- ajax and so on--//
+		});
+	})();
+	
+   
 })(window.jQuery);
