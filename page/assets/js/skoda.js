@@ -177,13 +177,15 @@
             }).resize();
             $(window).scroll(function(e){
                 var x = $('footer').position().top-$(window).scrollTop()-$(window).height();
-                if($(window).scrollTop()+$(window).height()>$('document,body').height()-_foot_h){
+                if($(window).scrollTop()+$(window).height()>$(document).height()-_foot_h){
                     gotop.css('top',_h+x);
+                    //console.log("yes");
                 }else if($(window).scrollTop()==0){
                     gotop.css('top',$('document,body').height());
                 }else{
                     gotop.css('top',_h);
                 }
+               // console.log( _h,x);
             });
 
 
@@ -206,16 +208,33 @@
                 position:['auto',100]
             });
         });
-
-        var test_notification_ele = $('.notification .text-wrap').find('ul').clone();
-
+        
+        $('.default-update-info').click(function(){
+        	 $('.pop-idea-detail').bPopup().close();
+			 location.hash = 'bpop-profile-form';
+                if(br_ver.indexOf('msie 7')||br_ver.indexOf('msie 6')){
+                    $(window).trigger('hashchange');
+                }
+        });
+     
+		var trig = true;
+		var test_notification_ele = $('.notification .text-wrap').find('ul').html();
+		
         $('.notification .text-wrap').on('jsp-scroll-y',function(event, scrollPositionY, isAtTop, isAtBottom){
-            if(isAtBottom){
-                $(this).find('.jspPane').append(test_notification_ele);
+            if(isAtBottom && trig){
+            	trig = false;
+            	loadContent($(this));  
             }
         });
-
-
+		
+		function loadContent(scroll){
+			var api = scroll.data('jsp');
+			api.getContentPane().append(test_notification_ele);
+			api.reinitialise();
+			//-- ajax callback set trig true --// 
+			setTimeout(function(){trig=true;},800);
+		}
+		
         //get more data'  for example
         $('.suggestions').length>0&&(function(){
             var $suggestions =  $('.suggestions');
@@ -408,7 +427,7 @@
             $('.student',$form).change(function(){
                 var $this = $(this);
                 if($this.is(':checked')){
-                    $.alert('在此确认,本人若最终获奖,将选择获得"学子特别奖",同时放弃“2013年度聪明达人”奖。具体内容,<a href="./tnc.html#student" target="_blank">查看这里</a>。');
+                    $.alert('在此确认,本人若最终获奖,将选择获得"学子特别奖",同时放弃“2013年度聪明达人”奖。具体内容,<a href="./tnc.html#student" target="_blank">查看这里</a>。<a class="b-close pop-close close-student" href="#"><span></span></a>');
                 }
             });
 
@@ -449,16 +468,16 @@
         })();
 
 
-//        video popup
+		//video popup
         $('.pop-video-box01').length>0&&(function(){
             $('.btn-3d-becomeTalent3').click(function(){
                 $('.pop-video-box01').bPopup({
                     onOpen:function(){
+                    	 var video = $(this).find('.video');
                         setTimeout(
-                            function(_this){
-                                var video = $(_this).find('.video');
+                            function(){
                                 video.html(swf(video.data('vid'),540,374,video.data("fid")));
-                            },300,this
+                            },300
                         )
                     }
                 });
@@ -483,12 +502,11 @@
                     modalClose: false,
                     onOpen:function(){
                         domCache = $popbox.clone(true);
+                        var video = $(this).find('.video');
                         setTimeout(
-                            function(_this){
-                                var video = $(_this).find('.video');
+                            function(){                              
                                 video.html(swf(video.data('vid'),540,374,video.data("fid")));
-
-                            },300,this
+                            },300
                         )
                     },
                     onClose:function(){

@@ -118,11 +118,12 @@ small{font-size:80%}
 .wrap{margin-right:auto;margin-left:auto;*zoom:1;width:980px}.wrap:before,.wrap:after{display:table;content:"";line-height:0}
 .wrap:after{clear:both}
 header{width:100%;min-width:980px;position:relative;z-index:11}header .wrap{position:relative}
-header .ht{height:69px;border-bottom:1px solid #91aab1}
-.logo-skoda{background:url(../images/logo.png) no-repeat;width:113px;height:97px;position:absolute;top:0;right:22px}
+header .ht{height:69px;border-bottom:1px solid #221814}
+.logo-skoda{background:url(../images/logo.png) no-repeat;width:140px;height:97px;position:absolute;top:0;right:8px}
 .logo-clever{width:91px;height:83px;background:url(../images/logo-clever.png) no-repeat 0 10px;_display:inline;float:left;_display:inline}
 .logo-skoda a,.logo-clever a{display:block;width:100%;height:100%}
-.nav-bar{width:938px;height:90px;padding-left:22px;position:absolute;top:70px;left:50%;margin-left:-469px}.nav-bar .nav{padding-top:26px;_display:inline;float:left;_display:inline}.nav-bar .nav .nav-list li{float:left;_display:inline;list-style:none;margin-left:-3px;position:relative;z-index:1}.nav-bar .nav .nav-list li:nth-child(1){margin-left:0;z-index:5}
+.nav-bar{width:938px;height:90px;padding-left:10px;position:absolute;top:70px;left:50%;margin-left:-469px}.nav-bar .nav{padding-top:26px;_display:inline;float:left;_display:inline}.nav-bar .nav .nav-list li{float:left;_display:inline;list-style:none;margin-left:-3px;position:relative;z-index:1}.nav-bar .nav .nav-list li:nth-child(1){margin-left:0;z-index:5}
+.nav-bar .nav .ctp-wire{position: absolute;background: url(../images/wire.png) no-repeat;width: 3px;height: 28px;top: 0px;left: 516px;}
 .nav-bar .nav .nav-list li:nth-child(2){z-index:4}
 .nav-bar .nav .nav-list li:nth-child(3){z-index:3}
 .nav-bar .nav .nav-list li:nth-child(4){z-index:2}
@@ -271,6 +272,11 @@ footer .logo2{width:142px;height:43px;background:url(../images/logo2.png) no-rep
 .pop-idea-detail{width:781px;height:609px;display:none;background:url(../images/profile_popup.png) no-repeat}.pop-idea-detail .pop-close{top:0;right:0}
 .pop-idea-detail .pop-content{width:610px;height:438px;position:absolute;top:65px;left:60px;padding:20px 25px;background-color:#eeeae7;font-size:14px}.pop-idea-detail .pop-content .text-wrap{width:590px;height:438px;overflow:hidden;padding:0 10px}.pop-idea-detail .pop-content .text-wrap h1.title{width:148px;height:27px;background:url(../images/font-family.png) no-repeat -301px -37px;margin:10px 0}
 .pop-idea-detail .pop-content .text-wrap h2.title{width:123px;height:25px;margin:10px 0;background:url(../images/font-family.png) no-repeat -301px -71px}
+.pop-idea-detail .pop-content.default{background-color:transparent}
+.pop-idea-detail .pop-content .text-wrap h1.default-title{width: 283px;height: 23px;margin:153px 0 0 30px;background: url(../images/font-family.png) no-repeat -7px -96px;}
+.pop-idea-detail .pop-content .text-wrap .defautl-info{width:425px;height:82px;position:relative;background: url(../images/pop-default-info.png) no-repeat; margin-top:30px;margin-left:30px; float:left;}
+.pop-idea-detail .pop-content .text-wrap .defautl-info .default-update-info{position: absolute;top:-5px;left: 41px;}
+.pop-idea-detail .pop-content .text-wrap .ctp-gift{float:left;margin-left:10px;margin-top:10px;}
 .pop-profile-form{width:775px;background:url(../images/profile_form_bg_hd.png) no-repeat;padding-top:206px;display:none}.pop-profile-form .pop-close{right:-15px;top:111px}
 .pop-profile-form .user-pic{width:181px;height:181px}
 .pop-profile-form .pop-content{background:url(../images/profile_form_bg_bd.png) repeat-y;padding:0px 50px 0 50px;margin-top:-10px;color:#000;font-size:14px}.pop-profile-form .pop-content .row-fluid{margin-bottom:10px}
@@ -292,7 +298,8 @@ footer .logo2{width:142px;height:43px;background:url(../images/logo2.png) no-rep
 .pop-box .pop-content .title2{font-size:24px;font-weight:bold;color:#4ba82e}
 .pop-box .err{display:block;color:red;padding:10px 10px;text-align:center;font-size:16px}
 .confirm,.alert{width:342px;padding-top:40px;padding-bottom:30px;border:5px solid #4aa82c;background-image:url(../images/grain_bg.jpg);position:relative;text-align:center}.confirm .title,.alert .title{font-size:18px;color:#419a20;margin-bottom:20px;text-align:center;padding:0 22px}.confirm .title a,.alert .title a{color:#419a20}
-.confirm .btn-yes,.alert .btn-yes{margin-right:40px}
+.confirm .btn-yes,.alert .btn-yes{margin-right:40px} 
+.alert .close-student{top:-20px;right:-20px;}
 div[class*=pop-video-box]{border:5px solid #4ea736;width:604px;height:483px;display:none;background-image:url(../images/grain_bg.jpg)}div[class*=pop-video-box] .pop-close{top:-20px;right:-20px}
 div[class*=pop-video-box] .content{padding:32px;position:relative}div[class*=pop-video-box] .content .video{width:540px;height:374px}
 div[class*=pop-video-box] .share{position:absolute;left:516px;top:425px}div[class*=pop-video-box] .share .share-bar{background-position:0 -167px;height:54px;width:236px;top:-13px;left:-236px}div[class*=pop-video-box] .share .share-bar .icon-tsina{margin-left:18px}
