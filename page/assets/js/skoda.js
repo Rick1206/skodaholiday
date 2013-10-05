@@ -1,15 +1,17 @@
 (function($){
 
     //notification
-    $('.logined').click(function(){
-        var target = $(this).parent('.usr');
-        target.toggleClass('open');
-        $(document).on('click',function(e){
-            if($(e.target).parents('.usr').length ==0){
-                target.removeClass('open');
-            }
-        });
-    });
+       
+      $('.usr').mouseover(function(){
+      	$(this).addClass('open');
+      });
+      
+      $('.usr-popup').mouseout(function(){
+      	var target = $(this).parent('.usr');
+      	target.removeClass('open');
+      });
+     
+    
     // Index top carousel;
     $('.expert-carousel').length==1&&
         (function(){
@@ -428,8 +430,16 @@
                 var $this = $(this);
                 if($this.is(':checked')){
                     $.alert('在此确认,本人若最终获奖,将选择获得"学子特别奖",同时放弃“2013年度聪明达人”奖。具体内容,<a href="./tnc.html#student" target="_blank">查看这里</a>。<a class="b-close pop-close close-student" href="#"><span></span></a>');
+                	$(".close-student").click(function(){
+                		
+                		$this.attr("checked",false);
+                		
+                	});
                 }
             });
+            
+            
+            
 
             //validate
 

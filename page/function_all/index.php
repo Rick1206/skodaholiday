@@ -42,7 +42,7 @@ switch ($ftype) {
 		break;
 		
 	case 'User_Profile':
-		//$_SESSION["status"]= TRUE;
+		$_SESSION["status"]= TRUE;
 		if($_SESSION["status"]){
 			
 		$state = "1";		
@@ -59,12 +59,12 @@ switch ($ftype) {
 			
 		echo "{" . "\"state\":\"" . $state . "\",\"message\":\" ". $message."\",\"profile\":[{\"username\":\"".$username 
 			  ."\",\"headpic\":\"".$headpic
-			  ."\"}],\"questions\":[{\"questionId\":\"1\",\"title\":\"\",
+			  ."\"}],\"questions\":[{\"questionId\":\"12\",\"title\":\"a\",
 			  \"options\":[
-           			{\"optionId\": \"1\",\"title\": \"\",\"selected\": \"true\"},
-           			{\"optionId\": \"2\",\"title\": \"\",\"selected\": \"false\"},
-           			{\"optionId\": \"3\",\"title\": \"\",\"selected\": \"false\"},
-           			{\"optionId\": \"5\",\"title\": \"\",\"selected\": \"false\"}
+           			{\"optionId\": \"12\",\"title\": \"b\",\"selected\": \"true\"},
+           			{\"optionId\": \"2\",\"title\": \"c\",\"selected\": \"false\"},
+           			{\"optionId\": \"3\",\"title\": \"d\",\"selected\": \"false\"},
+           			{\"optionId\": \"5\",\"title\": \"e\",\"selected\": \"false\"}
        		  ]},{
 			  	\"questionId\":\"2\",\"title\":\"\",
 			  	\"options\":[

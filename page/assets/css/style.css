@@ -134,6 +134,8 @@ header .ht{height:69px;border-bottom:1px solid #221814}
 .nav-bar .nav .nav-list li .logined .usr-name{float:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:82px;text-align:left;line-height:28px;color:#ffffff}
 .nav-bar .nav .nav-list li .logined .usr-mgs{color:#0bb419;float:left;width:25px;text-align:center;padding-top:3px}
 .nav-bar .nav .nav-list li .usr-popup{width:245px;height:162px;padding:12px 20px;position:absolute;left:5px;top:34px;background-color:#f6f6f6;border:5px solid #4ba82e;visibility:hidden}.nav-bar .nav .nav-list li .usr-popup h2{color:#4ba82e;font-size:14px;padding-bottom:5px}
+.nav-bar .nav .nav-list li .usr-popup .popup-wire-left{position: absolute;background: url(../images/wire.png) no-repeat;width: 3px;height: 7px;top: -12px;left: 22px;}
+.nav-bar .nav .nav-list li .usr-popup .popup-wire-right{position: absolute;background: url(../images/wire.png) no-repeat;width: 3px;height: 7px;top: -12px;left: 122px;}
 .nav-bar .nav .nav-list li .usr-popup .notice-tit{width:62px;height:20px;display:inline-block;background-image:url(../images/font-family.png);background-position:-222px -47px}
 .nav-bar .nav .nav-list li .usr-popup .text-wrap{width:244px;height:100px;overflow:hidden}.nav-bar .nav .nav-list li .usr-popup .text-wrap ul{width:99%;list-style:none}
 .nav-bar .nav .nav-list li .usr-popup .text-wrap li{border-top:1px solid #cdced0;width:100%;color:#525558;*zoom:1;padding:5px 0;margin:0}.nav-bar .nav .nav-list li .usr-popup .text-wrap li:before,.nav-bar .nav .nav-list li .usr-popup .text-wrap li:after{display:table;content:"";line-height:0}
@@ -182,10 +184,10 @@ footer .logo2{width:142px;height:43px;background:url(../images/logo2.png) no-rep
 .ideas{width:820px;margin-right:auto;margin-left:auto;*zoom:1;position:relative;padding:20px 10px 50px 40px}.ideas:before,.ideas:after{display:table;content:"";line-height:0}
 .ideas:after{clear:both}
 .ideas .ideas-item{width:184px;height:240px;float:left;margin-right:20px;margin-bottom:10px;position:relative;display:block;background-image:url(../images/idea_items.jpg)}
-.ideas .ideas-hd .hd-item1{background-position:0 0}.ideas .ideas-hd .hd-item1:hover,.ideas .ideas-hd .hd-item1.selected{background-position:0 -241px}
-.ideas .ideas-hd .hd-item2{background-position:-210px 0;cursor:pointer}.ideas .ideas-hd .hd-item2:hover,.ideas .ideas-hd .hd-item2.selected{background-position:-210px -241px}
-.ideas .ideas-hd .hd-item3{background-position:-416px 0;cursor:pointer}.ideas .ideas-hd .hd-item3:hover,.ideas .ideas-hd .hd-item3.selected{background-position:-416px -241px}
-.ideas .ideas-hd .hd-item4{background-position:-616px 0;cursor:pointer}.ideas .ideas-hd .hd-item4:hover,.ideas .ideas-hd .hd-item4.selected{background-position:-616px -241px}
+.ideas .ideas-hd .hd-item1{background-position:0 -241px}.ideas .ideas-hd .hd-item1:hover,.ideas .ideas-hd .hd-item1.selected{background-position:0 0}
+.ideas .ideas-hd .hd-item2{background-position:-210px -241px;cursor:pointer}.ideas .ideas-hd .hd-item2:hover,.ideas .ideas-hd .hd-item2.selected{;background-position:-210px 0}
+.ideas .ideas-hd .hd-item3{background-position:-416px -241px;cursor:pointer}.ideas .ideas-hd .hd-item3:hover,.ideas .ideas-hd .hd-item3.selected{background-position:-416px 0}
+.ideas .ideas-hd .hd-item4{background-position:-616px -241px;cursor:pointer}.ideas .ideas-hd .hd-item4:hover,.ideas .ideas-hd .hd-item4.selected{background-position:-616px 0}
 .ideas .ideas-bd .ideas-item{height:276px}.ideas .ideas-bd .ideas-item .info{padding-top:34px;width:153px;margin-right:auto;margin-left:auto;*zoom:1}.ideas .ideas-bd .ideas-item .info:before,.ideas .ideas-bd .ideas-item .info:after{display:table;content:"";line-height:0}
 .ideas .ideas-bd .ideas-item .info:after{clear:both}
 .ideas .ideas-bd .ideas-item .info .span8{padding-top:4px;color:#555555;font-weight:bold}.ideas .ideas-bd .ideas-item .info .span8 span{color:#61b247}
@@ -232,6 +234,8 @@ footer .logo2{width:142px;height:43px;background:url(../images/logo2.png) no-rep
 .notification .text-wrap li .time{float:right;color:#8d8d8e}
 .notification .btns{text-align:right;padding-top:5px}
 .user-intro .text-wrap{width:150px;height:70px;margin-top:5px}
+.user-intro .ctp-user-intro{width:150px;height:72px;overflow:hidden;margin-top:5px;position:relative}
+.user-intro .ctp-intro-more{position: absolute;top:53px;left:120px;color:#4ba82e}
 .user-intro .name{font-size:14px}
 .user-intro .color{color:#68b254}
 .user-intro .btns{padding-top:19px}
